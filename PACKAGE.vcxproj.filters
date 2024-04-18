@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\testDownloads\opencv Lib\CMakeFiles\637c6c375035fb1ef1421c5eb85d8a1b\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{10804360-87DB-3D84-94A8-10C685CB5942}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

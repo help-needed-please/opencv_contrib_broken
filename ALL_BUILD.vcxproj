@@ -1,0 +1,2454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{394A5C2E-574F-351F-8A04-6C1B90460BD1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\testDownloads\opencv Lib\3rdparty\ippicv\ippicv_win\icv\include;D:\testDownloads\opencv Lib\3rdparty\ippicv\ippicv_win\iw\include;D:\testDownloads\opencv Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\testDownloads\opencv Lib\3rdparty\ippicv\ippicv_win\icv\include;D:\testDownloads\opencv Lib\3rdparty\ippicv\ippicv_win\iw\include;D:\testDownloads\opencv Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\testDownloads\opencv\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/testDownloads/opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/testDownloads/opencv "-BD:/testDownloads/opencv Lib" --check-stamp-file "D:/testDownloads/opencv Lib/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindJavaCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJNI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.28\Templates\CPackConfig.cmake.in;D:\testDownloads\opencv Lib\3rdparty\ffmpeg\ffmpeg_version.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeCCompiler.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeCXXCompiler.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeRCCompiler.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeSystem.cmake;D:\testDownloads\opencv\3rdparty\ffmpeg\ffmpeg.cmake;D:\testDownloads\opencv\3rdparty\ippicv\ippicv.cmake;D:\testDownloads\opencv\cmake\OpenCVCRTLinkage.cmake;D:\testDownloads\opencv\cmake\OpenCVCompilerOptimizations.cmake;D:\testDownloads\opencv\cmake\OpenCVCompilerOptions.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectApacheAnt.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectCXXCompiler.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectDirectML.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectDirectX.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectFlatbuffers.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectOpenCL.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectPython.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectTrace.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectVTK.cmake;D:\testDownloads\opencv\cmake\OpenCVDownload.cmake;D:\testDownloads\opencv\cmake\OpenCVExtraTargets.cmake;D:\testDownloads\opencv\cmake\OpenCVFindFrameworks.cmake;D:\testDownloads\opencv\cmake\OpenCVFindIPP.cmake;D:\testDownloads\opencv\cmake\OpenCVFindIPPIW.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLAPACK.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsGUI.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsGrfmt.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsPerf.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsVideo.cmake;D:\testDownloads\opencv\cmake\OpenCVFindMKL.cmake;D:\testDownloads\opencv\cmake\OpenCVFindOpenBLAS.cmake;D:\testDownloads\opencv\cmake\OpenCVFindOpenEXR.cmake;D:\testDownloads\opencv\cmake\OpenCVFindProtobuf.cmake;D:\testDownloads\opencv\cmake\OpenCVGenABI.cmake;D:\testDownloads\opencv\cmake\OpenCVGenAndroidMK.cmake;D:\testDownloads\opencv\cmake\OpenCVGenConfig.cmake;D:\testDownloads\opencv\cmake\OpenCVGenHeaders.cmake;D:\testDownloads\opencv\cmake\OpenCVGenSetupVars.cmake;D:\testDownloads\opencv\cmake\OpenCVInstallLayout.cmake;D:\testDownloads\opencv\cmake\OpenCVMinDepVersions.cmake;D:\testDownloads\opencv\cmake\OpenCVModule.cmake;D:\testDownloads\opencv\cmake\OpenCVPCHSupport.cmake;D:\testDownloads\opencv\cmake\OpenCVPackaging.cmake;D:\testDownloads\opencv\cmake\OpenCVUtils.cmake;D:\testDownloads\opencv\cmake\OpenCVVersion.cmake;D:\testDownloads\opencv\cmake\checks\directml.cpp;D:\testDownloads\opencv\cmake\checks\directx.cpp;D:\testDownloads\opencv\cmake\checks\opencl.cpp;D:\testDownloads\opencv\cmake\checks\win32uitest.cpp;D:\testDownloads\opencv\cmake\platforms\OpenCV-Windows.cmake;D:\testDownloads\opencv\cmake\templates\OpenCVConfig-version.cmake.in;D:\testDownloads\opencv\cmake\templates\OpenCVConfig.cmake.in;D:\testDownloads\opencv\cmake\templates\OpenCVConfig.root-WIN32.cmake.in;D:\testDownloads\opencv\cmake\templates\cmake_uninstall.cmake.in;D:\testDownloads\opencv\cmake\templates\custom_hal.hpp.in;D:\testDownloads\opencv\cmake\templates\cv_cpu_config.h.in;D:\testDownloads\opencv\cmake\templates\cvconfig.h.in;D:\testDownloads\opencv\cmake\templates\opencv_modules.hpp.in;D:\testDownloads\opencv\cmake\templates\setup_vars_win32.cmd.in;D:\testDownloads\opencv\cmake\vars\EnableModeVars.cmake;D:\testDownloads\opencv\modules\core\include\opencv2\core\version.hpp;D:\testDownloads\opencv\modules\dnn\cmake\init.cmake;D:\testDownloads\opencv\modules\gapi\cmake\DownloadADE.cmake;D:\testDownloads\opencv\modules\gapi\cmake\init.cmake;D:\testDownloads\opencv\modules\highgui\cmake\detect_win32ui.cmake;D:\testDownloads\opencv\modules\highgui\cmake\init.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_dc1394.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_dshow.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_ffmpeg.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_gstreamer.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_msmf.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_obsensor.cmake;D:\testDownloads\opencv\modules\videoio\cmake\init.cmake;D:\testDownloads\opencv_contrib\modules\julia\cmake\init.cmake;D:\testDownloads\opencv_contrib\modules\matlab\cmake\init.cmake;D:\testDownloads\opencv_contrib\modules\text\cmake\FindTesseract.cmake;D:\testDownloads\opencv_contrib\modules\text\cmake\init.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\testDownloads\opencv Lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/testDownloads/opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/testDownloads/opencv "-BD:/testDownloads/opencv Lib" --check-stamp-file "D:/testDownloads/opencv Lib/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindJavaCommon.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindJNI.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.28\Templates\CPackConfig.cmake.in;D:\testDownloads\opencv Lib\3rdparty\ffmpeg\ffmpeg_version.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeCCompiler.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeCXXCompiler.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeRCCompiler.cmake;D:\testDownloads\opencv Lib\CMakeFiles\3.28.4\CMakeSystem.cmake;D:\testDownloads\opencv\3rdparty\ffmpeg\ffmpeg.cmake;D:\testDownloads\opencv\3rdparty\ippicv\ippicv.cmake;D:\testDownloads\opencv\cmake\OpenCVCRTLinkage.cmake;D:\testDownloads\opencv\cmake\OpenCVCompilerOptimizations.cmake;D:\testDownloads\opencv\cmake\OpenCVCompilerOptions.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectApacheAnt.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectCXXCompiler.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectDirectML.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectDirectX.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectFlatbuffers.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectOpenCL.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectPython.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectTrace.cmake;D:\testDownloads\opencv\cmake\OpenCVDetectVTK.cmake;D:\testDownloads\opencv\cmake\OpenCVDownload.cmake;D:\testDownloads\opencv\cmake\OpenCVExtraTargets.cmake;D:\testDownloads\opencv\cmake\OpenCVFindFrameworks.cmake;D:\testDownloads\opencv\cmake\OpenCVFindIPP.cmake;D:\testDownloads\opencv\cmake\OpenCVFindIPPIW.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLAPACK.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsGUI.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsGrfmt.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsPerf.cmake;D:\testDownloads\opencv\cmake\OpenCVFindLibsVideo.cmake;D:\testDownloads\opencv\cmake\OpenCVFindMKL.cmake;D:\testDownloads\opencv\cmake\OpenCVFindOpenBLAS.cmake;D:\testDownloads\opencv\cmake\OpenCVFindOpenEXR.cmake;D:\testDownloads\opencv\cmake\OpenCVFindProtobuf.cmake;D:\testDownloads\opencv\cmake\OpenCVGenABI.cmake;D:\testDownloads\opencv\cmake\OpenCVGenAndroidMK.cmake;D:\testDownloads\opencv\cmake\OpenCVGenConfig.cmake;D:\testDownloads\opencv\cmake\OpenCVGenHeaders.cmake;D:\testDownloads\opencv\cmake\OpenCVGenSetupVars.cmake;D:\testDownloads\opencv\cmake\OpenCVInstallLayout.cmake;D:\testDownloads\opencv\cmake\OpenCVMinDepVersions.cmake;D:\testDownloads\opencv\cmake\OpenCVModule.cmake;D:\testDownloads\opencv\cmake\OpenCVPCHSupport.cmake;D:\testDownloads\opencv\cmake\OpenCVPackaging.cmake;D:\testDownloads\opencv\cmake\OpenCVUtils.cmake;D:\testDownloads\opencv\cmake\OpenCVVersion.cmake;D:\testDownloads\opencv\cmake\checks\directml.cpp;D:\testDownloads\opencv\cmake\checks\directx.cpp;D:\testDownloads\opencv\cmake\checks\opencl.cpp;D:\testDownloads\opencv\cmake\checks\win32uitest.cpp;D:\testDownloads\opencv\cmake\platforms\OpenCV-Windows.cmake;D:\testDownloads\opencv\cmake\templates\OpenCVConfig-version.cmake.in;D:\testDownloads\opencv\cmake\templates\OpenCVConfig.cmake.in;D:\testDownloads\opencv\cmake\templates\OpenCVConfig.root-WIN32.cmake.in;D:\testDownloads\opencv\cmake\templates\cmake_uninstall.cmake.in;D:\testDownloads\opencv\cmake\templates\custom_hal.hpp.in;D:\testDownloads\opencv\cmake\templates\cv_cpu_config.h.in;D:\testDownloads\opencv\cmake\templates\cvconfig.h.in;D:\testDownloads\opencv\cmake\templates\opencv_modules.hpp.in;D:\testDownloads\opencv\cmake\templates\setup_vars_win32.cmd.in;D:\testDownloads\opencv\cmake\vars\EnableModeVars.cmake;D:\testDownloads\opencv\modules\core\include\opencv2\core\version.hpp;D:\testDownloads\opencv\modules\dnn\cmake\init.cmake;D:\testDownloads\opencv\modules\gapi\cmake\DownloadADE.cmake;D:\testDownloads\opencv\modules\gapi\cmake\init.cmake;D:\testDownloads\opencv\modules\highgui\cmake\detect_win32ui.cmake;D:\testDownloads\opencv\modules\highgui\cmake\init.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_dc1394.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_dshow.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_ffmpeg.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_gstreamer.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_msmf.cmake;D:\testDownloads\opencv\modules\videoio\cmake\detect_obsensor.cmake;D:\testDownloads\opencv\modules\videoio\cmake\init.cmake;D:\testDownloads\opencv_contrib\modules\julia\cmake\init.cmake;D:\testDownloads\opencv_contrib\modules\matlab\cmake\init.cmake;D:\testDownloads\opencv_contrib\modules\text\cmake\FindTesseract.cmake;D:\testDownloads\opencv_contrib\modules\text\cmake\init.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\testDownloads\opencv Lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\ZERO_CHECK.vcxproj">
+      <Project>{059895FA-90A0-3CDD-B91C-DADA6E92F14B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bgsegm\example_bgsegm_bgfg.vcxproj">
+      <Project>{C0C3F963-610B-3142-BD03-9D7BA83A5F71}</Project>
+      <Name>example_bgsegm_bgfg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bioinspired\example_bioinspired_OpenEXRimages_HDR_Retina_toneMapping.vcxproj">
+      <Project>{0394105E-39B5-393F-A90C-D02060B3A008}</Project>
+      <Name>example_bioinspired_OpenEXRimages_HDR_Retina_toneMapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bioinspired\example_bioinspired_retinaDemo.vcxproj">
+      <Project>{B4F35619-5300-33FB-A5B7-FA1B3265FAEC}</Project>
+      <Name>example_bioinspired_retinaDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ccalib\example_ccalib_multi_cameras_calibration.vcxproj">
+      <Project>{ECDC148F-4D50-37A6-93D1-46EA2AD593DE}</Project>
+      <Name>example_ccalib_multi_cameras_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ccalib\example_ccalib_omni_calibration.vcxproj">
+      <Project>{004DF424-6765-320C-9E23-37D88966069D}</Project>
+      <Name>example_ccalib_omni_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ccalib\example_ccalib_omni_stereo_calibration.vcxproj">
+      <Project>{7A471182-C18C-3B7E-B3DE-82F380DFDD8B}</Project>
+      <Name>example_ccalib_omni_stereo_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ccalib\example_ccalib_random_pattern_calibration.vcxproj">
+      <Project>{311B706A-258F-3311-B2DD-E9D1D547ED6E}</Project>
+      <Name>example_ccalib_random_pattern_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ccalib\example_ccalib_random_pattern_generator.vcxproj">
+      <Project>{450F893B-5BAC-30CF-8360-FCDCD6F6E961}</Project>
+      <Name>example_ccalib_random_pattern_generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_3calibration.vcxproj">
+      <Project>{B08735B9-D130-37B1-8B48-AEE7A89EA227}</Project>
+      <Name>example_cpp_3calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_application_trace.vcxproj">
+      <Project>{E5F863EC-091A-3599-83AE-7EC23BB3A68F}</Project>
+      <Name>example_cpp_application_trace</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_aruco_dict_utils.vcxproj">
+      <Project>{161E44F6-718A-3076-9F32-C23B6E10B383}</Project>
+      <Name>example_cpp_aruco_dict_utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_asift.vcxproj">
+      <Project>{CA906664-7610-36BF-946E-7DAD2654D2D1}</Project>
+      <Name>example_cpp_asift</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_audio_spectrogram.vcxproj">
+      <Project>{7E7F9992-699C-3826-B41F-B128156E09A5}</Project>
+      <Name>example_cpp_audio_spectrogram</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_barcode.vcxproj">
+      <Project>{8C89DF9C-910A-3A2B-B5C9-AE2493C12D66}</Project>
+      <Name>example_cpp_barcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_bgfg_segm.vcxproj">
+      <Project>{14B884E3-DBE7-37D8-9624-7DFB0DB70B61}</Project>
+      <Name>example_cpp_bgfg_segm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_calibration.vcxproj">
+      <Project>{7A6737FF-3F08-33A4-AFD8-1316CE93D5A9}</Project>
+      <Name>example_cpp_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_camshiftdemo.vcxproj">
+      <Project>{F6FE1431-A6E3-3C9D-B504-51EF6A969587}</Project>
+      <Name>example_cpp_camshiftdemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_cloning_demo.vcxproj">
+      <Project>{2E78F4B7-23D1-37A4-8232-5CAEBA5BFDEE}</Project>
+      <Name>example_cpp_cloning_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_cloning_gui.vcxproj">
+      <Project>{9309A8A4-501E-3C43-B16F-6D7AA4119920}</Project>
+      <Name>example_cpp_cloning_gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_connected_components.vcxproj">
+      <Project>{6A14A6AA-2B1E-3EEC-BF55-D324042A73EC}</Project>
+      <Name>example_cpp_connected_components</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_contours2.vcxproj">
+      <Project>{322152D0-4767-3070-BBC7-2C98049B5A76}</Project>
+      <Name>example_cpp_contours2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_convexhull.vcxproj">
+      <Project>{549ABC54-DB40-3DD8-8BA1-EE87CE8F3D14}</Project>
+      <Name>example_cpp_convexhull</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_cout_mat.vcxproj">
+      <Project>{42B2517B-FCD6-3C0F-BB1F-E7486748435F}</Project>
+      <Name>example_cpp_cout_mat</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_create_mask.vcxproj">
+      <Project>{3CDFF222-7545-342C-BDD0-2141868987F9}</Project>
+      <Name>example_cpp_create_mask</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_dbt_face_detection.vcxproj">
+      <Project>{C5FE42F7-A489-3E0E-8B6B-E282CE64AFBE}</Project>
+      <Name>example_cpp_dbt_face_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_delaunay2.vcxproj">
+      <Project>{4EA9FF84-9AF4-3D20-9738-571D3DF7C958}</Project>
+      <Name>example_cpp_delaunay2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_demhist.vcxproj">
+      <Project>{242F58D5-0F7D-318C-8C40-D87C09F85611}</Project>
+      <Name>example_cpp_demhist</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_detect_blob.vcxproj">
+      <Project>{E47E82C7-DFDD-3A18-A50A-61E865B0D0F6}</Project>
+      <Name>example_cpp_detect_blob</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_detect_mser.vcxproj">
+      <Project>{4A006018-3CF6-38B3-AB3E-A47A094AD086}</Project>
+      <Name>example_cpp_detect_mser</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_dft.vcxproj">
+      <Project>{185F1306-B03D-32E5-B6F6-958A67843239}</Project>
+      <Name>example_cpp_dft</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_digits_lenet.vcxproj">
+      <Project>{ACBB6256-0F65-352C-9300-0976448B6377}</Project>
+      <Name>example_cpp_digits_lenet</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_digits_svm.vcxproj">
+      <Project>{BE3B74F8-8C94-307E-A80D-039717B1B7CB}</Project>
+      <Name>example_cpp_digits_svm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_dis_opticalflow.vcxproj">
+      <Project>{158173CC-C10A-3E38-86D4-4B0997C53FE6}</Project>
+      <Name>example_cpp_dis_opticalflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_distrans.vcxproj">
+      <Project>{FE931947-396D-3705-80D5-38C2118A6E09}</Project>
+      <Name>example_cpp_distrans</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_drawing.vcxproj">
+      <Project>{FE8A73E1-7022-3D4F-B625-797AC5EF73E0}</Project>
+      <Name>example_cpp_drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_edge.vcxproj">
+      <Project>{9709EBD3-8951-33F5-8807-D05649670FD3}</Project>
+      <Name>example_cpp_edge</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_ela.vcxproj">
+      <Project>{204AE73B-322E-3331-9E48-A811517900CA}</Project>
+      <Name>example_cpp_ela</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_em.vcxproj">
+      <Project>{F7F968CE-4E49-32CA-BE96-75782199EFB2}</Project>
+      <Name>example_cpp_em</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_epipolar_lines.vcxproj">
+      <Project>{45C5DC8C-F282-3E11-8590-2FA47FD57518}</Project>
+      <Name>example_cpp_epipolar_lines</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_essential_mat_reconstr.vcxproj">
+      <Project>{ADE393F2-B4DB-34D0-A3C1-1894290117A8}</Project>
+      <Name>example_cpp_essential_mat_reconstr</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_example.vcxproj">
+      <Project>{6C7CB719-501D-37EA-930F-66F6F9094A26}</Project>
+      <Name>example_cpp_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_facedetect.vcxproj">
+      <Project>{70636CB3-2064-36EE-8EAA-97A633891325}</Project>
+      <Name>example_cpp_facedetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_facial_features.vcxproj">
+      <Project>{A31E778B-1B7C-3BC7-9C7A-A9A88E059D95}</Project>
+      <Name>example_cpp_facial_features</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_falsecolor.vcxproj">
+      <Project>{A8481178-0F09-37BA-AB98-D5CE2A06A5C7}</Project>
+      <Name>example_cpp_falsecolor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_fback.vcxproj">
+      <Project>{F074EC9C-1A69-38E4-A848-B185B0B4AF96}</Project>
+      <Name>example_cpp_fback</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_ffilldemo.vcxproj">
+      <Project>{B522A6BE-98B4-309E-B94C-015C8F545E75}</Project>
+      <Name>example_cpp_ffilldemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_filestorage.vcxproj">
+      <Project>{C0982F87-7418-30B6-813A-CF9E722F8C8C}</Project>
+      <Name>example_cpp_filestorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_fitellipse.vcxproj">
+      <Project>{11196501-93AA-3EDC-B432-097CCD2BC3C2}</Project>
+      <Name>example_cpp_fitellipse</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_flann_search_dataset.vcxproj">
+      <Project>{9096B0A4-E9BE-3AC0-9048-4C7D8CEC9320}</Project>
+      <Name>example_cpp_flann_search_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_grabcut.vcxproj">
+      <Project>{D4B4D932-2A5F-3CAF-BDD6-CF0F46A21797}</Project>
+      <Name>example_cpp_grabcut</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_image_alignment.vcxproj">
+      <Project>{0D3428F5-9537-34CD-8DC8-9C0117234505}</Project>
+      <Name>example_cpp_image_alignment</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_imagelist_creator.vcxproj">
+      <Project>{FCAA35CB-D25F-31DE-8FFE-71C5BF326F71}</Project>
+      <Name>example_cpp_imagelist_creator</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_imagelist_reader.vcxproj">
+      <Project>{D75C3F0F-9FE8-32E3-8842-03F6D47D7B5D}</Project>
+      <Name>example_cpp_imagelist_reader</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_imgcodecs_jpeg.vcxproj">
+      <Project>{DE1257E1-6821-3BE2-AB8A-302C8A309EF5}</Project>
+      <Name>example_cpp_imgcodecs_jpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_inpaint.vcxproj">
+      <Project>{794AE0B8-730B-3093-8A84-2FC8D9C9CBB4}</Project>
+      <Name>example_cpp_inpaint</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_intelligent_scissors.vcxproj">
+      <Project>{738CC712-6824-3CA0-BB5C-A5700F22A7BD}</Project>
+      <Name>example_cpp_intelligent_scissors</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_intersectExample.vcxproj">
+      <Project>{22785870-A30D-3724-B9F6-71E74F89AF1F}</Project>
+      <Name>example_cpp_intersectExample</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_kalman.vcxproj">
+      <Project>{EC758127-342A-3D13-974F-940DDF8506F4}</Project>
+      <Name>example_cpp_kalman</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_kmeans.vcxproj">
+      <Project>{42CA8B4C-F0AF-36C9-9380-566B0D2A2308}</Project>
+      <Name>example_cpp_kmeans</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_laplace.vcxproj">
+      <Project>{EECBBAD0-7340-3BDE-9E84-1B6085BB8534}</Project>
+      <Name>example_cpp_laplace</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_letter_recog.vcxproj">
+      <Project>{9D777D1F-4878-3840-B449-F426080E49C2}</Project>
+      <Name>example_cpp_letter_recog</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_lkdemo.vcxproj">
+      <Project>{22CD78EA-3329-31F1-B31E-C64BE41C3669}</Project>
+      <Name>example_cpp_lkdemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_logistic_regression.vcxproj">
+      <Project>{E368634D-13F6-3D40-917C-CC25E985B139}</Project>
+      <Name>example_cpp_logistic_regression</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_lsd_lines.vcxproj">
+      <Project>{BC5D7399-FBA8-3579-82D2-4C70B8756363}</Project>
+      <Name>example_cpp_lsd_lines</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_mask_tmpl.vcxproj">
+      <Project>{462E24B3-B1A2-34E8-96C7-D7E0216C30E5}</Project>
+      <Name>example_cpp_mask_tmpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_matchmethod_orb_akaze_brisk.vcxproj">
+      <Project>{3467FAF1-3279-3512-A07C-113991A83B01}</Project>
+      <Name>example_cpp_matchmethod_orb_akaze_brisk</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_minarea.vcxproj">
+      <Project>{923DF0D7-D56D-3055-A75D-5E6010D576AA}</Project>
+      <Name>example_cpp_minarea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_morphology2.vcxproj">
+      <Project>{BEEB8E4F-670E-3289-B044-B7AC83143F3E}</Project>
+      <Name>example_cpp_morphology2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_neural_network.vcxproj">
+      <Project>{AA593C46-5409-3871-B403-1BFD776C2D47}</Project>
+      <Name>example_cpp_neural_network</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_npr_demo.vcxproj">
+      <Project>{E4A47153-71D5-30A7-9123-A5F4EE3E963E}</Project>
+      <Name>example_cpp_npr_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_opencv_version.vcxproj">
+      <Project>{464F64E9-4CBB-3D4A-BA58-1744B3B3F339}</Project>
+      <Name>example_cpp_opencv_version</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_pca.vcxproj">
+      <Project>{3D6E7578-4ED7-3AAF-B4E1-AC8A93575252}</Project>
+      <Name>example_cpp_pca</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_peopledetect.vcxproj">
+      <Project>{F4E2E28B-99ED-3B5C-B67E-E3663090C9FE}</Project>
+      <Name>example_cpp_peopledetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_phase_corr.vcxproj">
+      <Project>{2C8CCC34-7632-3F0A-9575-B805D3D50EFF}</Project>
+      <Name>example_cpp_phase_corr</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_points_classifier.vcxproj">
+      <Project>{4E865912-F0B3-30E2-8D37-2D9E94984C85}</Project>
+      <Name>example_cpp_points_classifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_polar_transforms.vcxproj">
+      <Project>{F421DE41-7CA1-30E8-A9E3-69F7A6F61336}</Project>
+      <Name>example_cpp_polar_transforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_qrcode.vcxproj">
+      <Project>{84C3A6F8-DB78-3087-A5B5-803DF081F768}</Project>
+      <Name>example_cpp_qrcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_segment_objects.vcxproj">
+      <Project>{522A0E62-9AA2-361A-B2A8-3FA557ABC22E}</Project>
+      <Name>example_cpp_segment_objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_select3dobj.vcxproj">
+      <Project>{49D837AF-DE2E-3EC4-A5C5-7E1FBBB24B14}</Project>
+      <Name>example_cpp_select3dobj</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_simd_basic.vcxproj">
+      <Project>{4C510697-01A2-3B10-BCF3-D5FCDDD0A8BC}</Project>
+      <Name>example_cpp_simd_basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_smiledetect.vcxproj">
+      <Project>{B2246ABC-C1A9-3C39-B6FF-3570E2A9294A}</Project>
+      <Name>example_cpp_smiledetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_squares.vcxproj">
+      <Project>{EC70B132-503B-3DE8-8A15-1C10070CAB45}</Project>
+      <Name>example_cpp_squares</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_stereo_calib.vcxproj">
+      <Project>{BA0C6FED-FB7F-3E84-ACDB-9F55EEABC181}</Project>
+      <Name>example_cpp_stereo_calib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_stereo_match.vcxproj">
+      <Project>{0F47D814-E968-3650-BB38-D4A25B52AF64}</Project>
+      <Name>example_cpp_stereo_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_stitching.vcxproj">
+      <Project>{66DAB557-3975-37BD-B19D-66CFEAB8A6F4}</Project>
+      <Name>example_cpp_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_stitching_detailed.vcxproj">
+      <Project>{33BCE5EB-71E9-3F44-AE8A-419C523E3894}</Project>
+      <Name>example_cpp_stitching_detailed</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_text_skewness_correction.vcxproj">
+      <Project>{B695D17D-9429-3DC2-95AD-5277EB96AB0F}</Project>
+      <Name>example_cpp_text_skewness_correction</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_train_HOG.vcxproj">
+      <Project>{481A3175-3A2A-38CC-8C79-979A767CC830}</Project>
+      <Name>example_cpp_train_HOG</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_train_svmsgd.vcxproj">
+      <Project>{6933EC8C-D304-3DA7-A121-0D5CE8A2411B}</Project>
+      <Name>example_cpp_train_svmsgd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_travelsalesman.vcxproj">
+      <Project>{E25BDBAB-622C-3BFA-8C29-43BBBB0B525B}</Project>
+      <Name>example_cpp_travelsalesman</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_tree_engine.vcxproj">
+      <Project>{D97AFEA3-1C09-3496-9A27-C419840B106F}</Project>
+      <Name>example_cpp_tree_engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_audio.vcxproj">
+      <Project>{B67AE386-BD52-3A08-B1FB-BEC148728F90}</Project>
+      <Name>example_cpp_videocapture_audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_audio_combination.vcxproj">
+      <Project>{5390D98D-1DD5-3DB9-8D09-DC302A6F980B}</Project>
+      <Name>example_cpp_videocapture_audio_combination</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_basic.vcxproj">
+      <Project>{4551E166-78B9-3DD3-9201-EABD58E0B970}</Project>
+      <Name>example_cpp_videocapture_basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_camera.vcxproj">
+      <Project>{461E02F6-0D67-3078-9D69-1391752F260B}</Project>
+      <Name>example_cpp_videocapture_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_gphoto2_autofocus.vcxproj">
+      <Project>{E2EB449D-B7EF-363A-87C9-55FA2E1EEFA8}</Project>
+      <Name>example_cpp_videocapture_gphoto2_autofocus</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_gstreamer_pipeline.vcxproj">
+      <Project>{CE0B7AAB-BD58-3719-94F6-2D53B5D1C3D6}</Project>
+      <Name>example_cpp_videocapture_gstreamer_pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_image_sequence.vcxproj">
+      <Project>{D3A91982-418C-33C2-8A2C-EDB7B30BE921}</Project>
+      <Name>example_cpp_videocapture_image_sequence</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_microphone.vcxproj">
+      <Project>{044B3568-78F8-3404-AE96-4C15059E1476}</Project>
+      <Name>example_cpp_videocapture_microphone</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_obsensor.vcxproj">
+      <Project>{9266C373-AE62-30A1-8411-D59E4FD87EE7}</Project>
+      <Name>example_cpp_videocapture_obsensor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_openni.vcxproj">
+      <Project>{3CB8A7AE-C466-3BFA-84F9-DA2577B76D4F}</Project>
+      <Name>example_cpp_videocapture_openni</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_realsense.vcxproj">
+      <Project>{424C339A-E6EC-38BD-B7D1-A4059A7B2BC3}</Project>
+      <Name>example_cpp_videocapture_realsense</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videocapture_starter.vcxproj">
+      <Project>{A4BAF9B3-092E-3964-9CF6-0AA8B485BC3E}</Project>
+      <Name>example_cpp_videocapture_starter</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_videowriter_basic.vcxproj">
+      <Project>{B418DDEE-9896-3CAA-8E5E-711B28A4EF18}</Project>
+      <Name>example_cpp_videowriter_basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_warpPerspective_demo.vcxproj">
+      <Project>{91E1BD87-934A-3E35-8F1C-4BDF89B740EC}</Project>
+      <Name>example_cpp_warpPerspective_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_cpp_watershed.vcxproj">
+      <Project>{8ACE446B-8AB2-3811-8376-12477DD296FC}</Project>
+      <Name>example_cpp_watershed</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_ar_hmdb.vcxproj">
+      <Project>{331B3524-C7C8-35BC-B6BF-CDA5196ED52D}</Project>
+      <Name>example_datasets_ar_hmdb</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_ar_hmdb_benchmark.vcxproj">
+      <Project>{4233147E-2575-3818-8768-BA8AE76210D2}</Project>
+      <Name>example_datasets_ar_hmdb_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_ar_sports.vcxproj">
+      <Project>{0086C0CB-67B6-3077-8FF0-43E7D5E99014}</Project>
+      <Name>example_datasets_ar_sports</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_fr_adience.vcxproj">
+      <Project>{4F80A2D9-1A59-3F96-90B8-366E4AD62F9F}</Project>
+      <Name>example_datasets_fr_adience</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_fr_lfw.vcxproj">
+      <Project>{7E317A3F-6DEE-368E-9C3F-DC1C64DB1D69}</Project>
+      <Name>example_datasets_fr_lfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_fr_lfw_benchmark.vcxproj">
+      <Project>{3708E33B-F88D-3C71-B49D-4DEC7719DAB7}</Project>
+      <Name>example_datasets_fr_lfw_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_gr_chalearn.vcxproj">
+      <Project>{438305B5-6D0F-3F4C-8C73-84E881045407}</Project>
+      <Name>example_datasets_gr_chalearn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_gr_skig.vcxproj">
+      <Project>{979E932E-223B-3820-B575-8121BCCA0C22}</Project>
+      <Name>example_datasets_gr_skig</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_hpe_humaneva.vcxproj">
+      <Project>{1B472DAE-515C-3EEC-9292-085C39183AE4}</Project>
+      <Name>example_datasets_hpe_humaneva</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_hpe_parse.vcxproj">
+      <Project>{D673E806-4E33-3009-8C44-8AB2095AA3F7}</Project>
+      <Name>example_datasets_hpe_parse</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_ir_affine.vcxproj">
+      <Project>{F580396C-527F-3869-A5C3-5D138D8B1B7D}</Project>
+      <Name>example_datasets_ir_affine</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_ir_robot.vcxproj">
+      <Project>{54A8E146-560B-348E-8E55-071B49A3BFD4}</Project>
+      <Name>example_datasets_ir_robot</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_is_bsds.vcxproj">
+      <Project>{F7BE0DA4-B574-3802-A12F-D6AD9C7317D5}</Project>
+      <Name>example_datasets_is_bsds</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_is_weizmann.vcxproj">
+      <Project>{017B4683-1E12-3F2E-9B65-7D6B3B5ADF22}</Project>
+      <Name>example_datasets_is_weizmann</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_msm_epfl.vcxproj">
+      <Project>{B00998DC-54EF-3DDF-B23F-030D34FB2C5D}</Project>
+      <Name>example_datasets_msm_epfl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_msm_middlebury.vcxproj">
+      <Project>{BF49F601-C4B6-3C89-8216-23D6F2EDD142}</Project>
+      <Name>example_datasets_msm_middlebury</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_or_imagenet.vcxproj">
+      <Project>{34802ECC-BB97-35A8-A502-E4A566462BFB}</Project>
+      <Name>example_datasets_or_imagenet</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_or_mnist.vcxproj">
+      <Project>{F0470C58-E088-378A-9EDF-193416E337AD}</Project>
+      <Name>example_datasets_or_mnist</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_or_pascal.vcxproj">
+      <Project>{081EFEB7-C640-33DF-A75D-5A77634E98D1}</Project>
+      <Name>example_datasets_or_pascal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_or_sun.vcxproj">
+      <Project>{402C5981-04B5-31FA-8EFE-66598D29E8C8}</Project>
+      <Name>example_datasets_or_sun</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_pd_caltech.vcxproj">
+      <Project>{6FFCAFE3-E197-33B6-AB07-C30B01AE8BE2}</Project>
+      <Name>example_datasets_pd_caltech</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_pd_inria.vcxproj">
+      <Project>{08B8C0F8-846A-351C-99BD-8BABACE0E3AE}</Project>
+      <Name>example_datasets_pd_inria</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_slam_kitti.vcxproj">
+      <Project>{45A8F558-BBD9-33DD-AD7E-AA0D900EBA96}</Project>
+      <Name>example_datasets_slam_kitti</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_slam_tumindoor.vcxproj">
+      <Project>{52E80995-6B2F-3E2E-AB71-86160AFBC895}</Project>
+      <Name>example_datasets_slam_tumindoor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_sr_bsds.vcxproj">
+      <Project>{5FB9B8E4-DAEA-3B45-8D08-0F460E853B0E}</Project>
+      <Name>example_datasets_sr_bsds</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_sr_div2k.vcxproj">
+      <Project>{31940917-B576-3362-9855-8D2C214DCE66}</Project>
+      <Name>example_datasets_sr_div2k</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_sr_general100.vcxproj">
+      <Project>{89C7B528-97D9-3DB4-B31E-2C14F2925BA5}</Project>
+      <Name>example_datasets_sr_general100</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_tr_chars.vcxproj">
+      <Project>{7FCCE9F2-65DC-319E-BB72-B42F0D66F7E4}</Project>
+      <Name>example_datasets_tr_chars</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_tr_chars_benchmark.vcxproj">
+      <Project>{6EBF254A-91CF-39CA-AC83-FAEC70372525}</Project>
+      <Name>example_datasets_tr_chars_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_tr_icdar.vcxproj">
+      <Project>{A7D1630E-7873-3836-A452-299FAF69FE16}</Project>
+      <Name>example_datasets_tr_icdar</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_tr_icdar_benchmark.vcxproj">
+      <Project>{B9CB3B08-6EBE-3C94-B570-9DEB59362DBD}</Project>
+      <Name>example_datasets_tr_icdar_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_tr_svt.vcxproj">
+      <Project>{FCD62A17-3B5A-323E-8781-6338D81A4055}</Project>
+      <Name>example_datasets_tr_svt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_tr_svt_benchmark.vcxproj">
+      <Project>{894FD717-3A43-3D01-B986-C490AB5610D4}</Project>
+      <Name>example_datasets_tr_svt_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\example_datasets_track_vot.vcxproj">
+      <Project>{51FA0BBF-CD38-3E28-9027-5FDC8BA69437}</Project>
+      <Name>example_datasets_track_vot</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\directx\example_directx_d3d10_interop.vcxproj">
+      <Project>{014182CE-9620-32E3-98F1-E0B0E31C7A54}</Project>
+      <Name>example_directx_d3d10_interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\directx\example_directx_d3d11_interop.vcxproj">
+      <Project>{F0E078E6-F4DA-3DA3-9BAE-ACE64AFD6B7B}</Project>
+      <Name>example_directx_d3d11_interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\directx\example_directx_d3d9_interop.vcxproj">
+      <Project>{F913D119-0468-3654-B893-2DD31243CD54}</Project>
+      <Name>example_directx_d3d9_interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\directx\example_directx_d3d9ex_interop.vcxproj">
+      <Project>{DEA0F276-6995-31CC-913C-174AF280DB70}</Project>
+      <Name>example_directx_d3d9ex_interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_classification.vcxproj">
+      <Project>{6F6D8CCD-78A3-32D4-A652-3A7C6DED94EC}</Project>
+      <Name>example_dnn_classification</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_colorization.vcxproj">
+      <Project>{9181D366-2262-3246-A744-A5871FBD8D50}</Project>
+      <Name>example_dnn_colorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_dasiamrpn_tracker.vcxproj">
+      <Project>{E0730AAD-8344-3A72-ADE0-2FA1694D392A}</Project>
+      <Name>example_dnn_dasiamrpn_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_face_detect.vcxproj">
+      <Project>{C59E266B-18A4-358F-9A15-9E376061D681}</Project>
+      <Name>example_dnn_face_detect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_human_parsing.vcxproj">
+      <Project>{D1D2278B-143D-3B24-8E67-D06F7942A928}</Project>
+      <Name>example_dnn_human_parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_nanotrack_tracker.vcxproj">
+      <Project>{03F1993A-8061-370B-96C4-DEE3B6CFA340}</Project>
+      <Name>example_dnn_nanotrack_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_objdetect\example_dnn_objdetect_image_classification.vcxproj">
+      <Project>{5FE40A2C-4235-332E-A024-49B6A33BD7CF}</Project>
+      <Name>example_dnn_objdetect_image_classification</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_objdetect\example_dnn_objdetect_obj_detect.vcxproj">
+      <Project>{6F2B0D79-4152-37CA-85B0-EAD961B706AC}</Project>
+      <Name>example_dnn_objdetect_obj_detect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_object_detection.vcxproj">
+      <Project>{5B29D656-A04A-3F91-8F4F-E7A1D7DF8940}</Project>
+      <Name>example_dnn_object_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_openpose.vcxproj">
+      <Project>{F2C98CF7-F8A9-3D59-AFB5-0F7ED74874B4}</Project>
+      <Name>example_dnn_openpose</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_person_reid.vcxproj">
+      <Project>{249A2B40-DD79-39A9-A100-5FA68111CB56}</Project>
+      <Name>example_dnn_person_reid</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_scene_text_detection.vcxproj">
+      <Project>{5CFE1981-B485-3E83-8102-94F7BCEAB24E}</Project>
+      <Name>example_dnn_scene_text_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_scene_text_recognition.vcxproj">
+      <Project>{0EAF270B-0FEE-3A3B-A4AA-FE6166D75C2A}</Project>
+      <Name>example_dnn_scene_text_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_scene_text_spotting.vcxproj">
+      <Project>{75F28A65-1F84-33A3-A3A6-F4F3D5F4A589}</Project>
+      <Name>example_dnn_scene_text_spotting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_segmentation.vcxproj">
+      <Project>{9CEF38C9-0925-3FF4-B1D9-927FAF59FD89}</Project>
+      <Name>example_dnn_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_speech_recognition.vcxproj">
+      <Project>{A3A77B32-A5B0-3FF6-8050-9C31AC276761}</Project>
+      <Name>example_dnn_speech_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\example_dnn_superres_dnn_superres.vcxproj">
+      <Project>{B526B9C5-D21F-34E1-9A79-126F3E0C6974}</Project>
+      <Name>example_dnn_superres_dnn_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\example_dnn_superres_dnn_superres_benchmark_quality.vcxproj">
+      <Project>{B86472FE-5673-3643-AC7A-BB80D2849D19}</Project>
+      <Name>example_dnn_superres_dnn_superres_benchmark_quality</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\example_dnn_superres_dnn_superres_benchmark_time.vcxproj">
+      <Project>{C75E7E20-5A3D-38CC-B56E-35CFC95AFDF8}</Project>
+      <Name>example_dnn_superres_dnn_superres_benchmark_time</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\example_dnn_superres_dnn_superres_multioutput.vcxproj">
+      <Project>{4CBB4260-7C57-35D5-B051-D200ED13D0E4}</Project>
+      <Name>example_dnn_superres_dnn_superres_multioutput</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\example_dnn_superres_dnn_superres_video.vcxproj">
+      <Project>{382657E2-950E-318D-9430-F5BACB0E2EA3}</Project>
+      <Name>example_dnn_superres_dnn_superres_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_text_detection.vcxproj">
+      <Project>{0B1F31A0-B99D-3044-AAD3-1181CD513A01}</Project>
+      <Name>example_dnn_text_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_vit_tracker.vcxproj">
+      <Project>{DE6A2B85-FEA5-3D8F-BAD2-FF5750D7EB91}</Project>
+      <Name>example_dnn_vit_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\dnn\example_dnn_yolo_detector.vcxproj">
+      <Project>{0E27740B-5E7B-31FE-ADF5-3BF917D6FBEC}</Project>
+      <Name>example_dnn_yolo_detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dpm\example_dpm_cascade_detect_camera.vcxproj">
+      <Project>{FA8D95FB-E2C6-3AE8-8C51-7C01FEDD9FF8}</Project>
+      <Name>example_dpm_cascade_detect_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dpm\example_dpm_cascade_detect_sequence.vcxproj">
+      <Project>{ED69EFCC-0AF0-36A3-9A81-A43484B7A394}</Project>
+      <Name>example_dpm_cascade_detect_sequence</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facemark_demo_aam.vcxproj">
+      <Project>{AA66E01C-1D7B-394C-A96B-F3B72923F93D}</Project>
+      <Name>example_face_facemark_demo_aam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facemark_demo_lbf.vcxproj">
+      <Project>{350E9D2A-43F7-3CE6-AB8C-D5D2BBD61416}</Project>
+      <Name>example_face_facemark_demo_lbf</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facemark_lbf_fitting.vcxproj">
+      <Project>{DE08F038-E5E0-3877-B621-48B60B2039E3}</Project>
+      <Name>example_face_facemark_lbf_fitting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facerec_demo.vcxproj">
+      <Project>{B2939616-DDA8-38CC-8454-B31269A91C56}</Project>
+      <Name>example_face_facerec_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facerec_eigenfaces.vcxproj">
+      <Project>{B6F6A2E3-38BC-3D51-A9F6-DDAB3A626E6E}</Project>
+      <Name>example_face_facerec_eigenfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facerec_fisherfaces.vcxproj">
+      <Project>{2E8522FE-95AE-3564-B928-4A6995683902}</Project>
+      <Name>example_face_facerec_fisherfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facerec_lbph.vcxproj">
+      <Project>{59C3F0ED-A19A-3D2C-A61B-B8E29950B3D6}</Project>
+      <Name>example_face_facerec_lbph</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facerec_save_load.vcxproj">
+      <Project>{00A8696B-8C46-3AA8-97DE-FC48EE97D4F7}</Project>
+      <Name>example_face_facerec_save_load</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_facerec_video.vcxproj">
+      <Project>{39B6A552-2E2E-36EB-82A0-BBCB3E6103F7}</Project>
+      <Name>example_face_facerec_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_mace_webcam.vcxproj">
+      <Project>{E1C2917C-00FE-3385-91FB-AE11B3A8D248}</Project>
+      <Name>example_face_mace_webcam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_sampleDetectLandmarks.vcxproj">
+      <Project>{6BFD4ECB-0A76-3A3D-98D8-2438FE3F3175}</Project>
+      <Name>example_face_sampleDetectLandmarks</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_sampleDetectLandmarksvideo.vcxproj">
+      <Project>{52AFD33B-5B19-3873-87C7-D651566F3A75}</Project>
+      <Name>example_face_sampleDetectLandmarksvideo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_sample_face_swapping.vcxproj">
+      <Project>{41D9FC25-C146-36D9-9EA7-0BADC50762B9}</Project>
+      <Name>example_face_sample_face_swapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_sample_train_landmark_detector.vcxproj">
+      <Project>{9DE9A8C5-B84B-39FA-9608-DB2ED3FB7DF4}</Project>
+      <Name>example_face_sample_train_landmark_detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_sample_train_landmark_detector2.vcxproj">
+      <Project>{680F740B-232F-3846-B194-ACFDE5CC7BD0}</Project>
+      <Name>example_face_sample_train_landmark_detector2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\example_face_samplewriteconfigfile.vcxproj">
+      <Project>{34F3F61F-8C50-384A-A0F1-411CAAE3A0A7}</Project>
+      <Name>example_face_samplewriteconfigfile</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\fuzzy\example_fuzzy_fuzzy_filtering.vcxproj">
+      <Project>{9846DA4D-E50A-3F3E-9970-9E2321A01CF6}</Project>
+      <Name>example_fuzzy_fuzzy_filtering</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\fuzzy\example_fuzzy_fuzzy_inpainting.vcxproj">
+      <Project>{CDAD2F76-480C-36C2-9610-00964F842C16}</Project>
+      <Name>example_fuzzy_fuzzy_inpainting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_api_example.vcxproj">
+      <Project>{68C8ACB2-BC0B-37B6-9A16-7A846AB478B7}</Project>
+      <Name>example_gapi_api_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_draw_example.vcxproj">
+      <Project>{BEA4F7D2-7048-3B1F-894B-5EA211101B1B}</Project>
+      <Name>example_gapi_draw_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_face_detection_mtcnn.vcxproj">
+      <Project>{BCC8ED8E-DF51-32B1-9E03-4FE8A0EBBF82}</Project>
+      <Name>example_gapi_face_detection_mtcnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_gaze_estimation.vcxproj">
+      <Project>{B7230ACC-8605-3EB4-A3BC-B55C18B59881}</Project>
+      <Name>example_gapi_gaze_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_infer_ie_onnx_hybrid.vcxproj">
+      <Project>{1E27D835-20D3-3CCE-9788-E9A28B2BD95A}</Project>
+      <Name>example_gapi_infer_ie_onnx_hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_infer_single_roi.vcxproj">
+      <Project>{0D5D2DF3-6F92-3C99-8F72-40327168C99C}</Project>
+      <Name>example_gapi_infer_single_roi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_infer_ssd_onnx.vcxproj">
+      <Project>{15DD54AD-5F07-3CA4-B727-9E9012A17B35}</Project>
+      <Name>example_gapi_infer_ssd_onnx</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_oak_basic_infer.vcxproj">
+      <Project>{BB9D4696-A65F-3A90-934A-F1C58B2EE559}</Project>
+      <Name>example_gapi_oak_basic_infer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_oak_copy.vcxproj">
+      <Project>{9104A59F-73E5-349E-945E-B9BAE299CA64}</Project>
+      <Name>example_gapi_oak_copy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_oak_rgb_camera_encoding.vcxproj">
+      <Project>{D4936A6C-40F7-36A2-A11A-22A883DCAACD}</Project>
+      <Name>example_gapi_oak_rgb_camera_encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_oak_small_hetero_pipeline.vcxproj">
+      <Project>{DB391CA1-193F-3831-B7D3-A613F52ABB01}</Project>
+      <Name>example_gapi_oak_small_hetero_pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_onevpl_infer_with_advanced_device_selection.vcxproj">
+      <Project>{8BC9FC7E-7621-30F5-8995-689F64663D8D}</Project>
+      <Name>example_gapi_onevpl_infer_with_advanced_device_selection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_onevpl_source_to_bgr_conv.vcxproj">
+      <Project>{1D1C0F24-07E2-3F8F-84E5-365512CF84C4}</Project>
+      <Name>example_gapi_onevpl_source_to_bgr_conv</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_pipeline_modeling_tool.vcxproj">
+      <Project>{4144D514-315A-331D-840D-8BF695530674}</Project>
+      <Name>example_gapi_pipeline_modeling_tool</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_privacy_masking_camera.vcxproj">
+      <Project>{0891D9EB-64BA-3CD7-8F77-CAFC205EB75F}</Project>
+      <Name>example_gapi_privacy_masking_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_semantic_segmentation.vcxproj">
+      <Project>{78BCE62E-E492-3422-BF22-A8152F2FD04B}</Project>
+      <Name>example_gapi_semantic_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_slides_blur_gapi.vcxproj">
+      <Project>{0BAEAC9A-A20E-3C4C-9694-08416CB36515}</Project>
+      <Name>example_gapi_slides_blur_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_slides_sobel_cv.vcxproj">
+      <Project>{CE5BE927-A10F-3575-BB84-67E30B32B3F3}</Project>
+      <Name>example_gapi_slides_sobel_cv</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_slides_sobel_gapi.vcxproj">
+      <Project>{5AB7076F-8612-3D08-9B93-6CB0C6F33799}</Project>
+      <Name>example_gapi_slides_sobel_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\example_gapi_text_detection.vcxproj">
+      <Project>{97D0097D-FEAA-30AE-925A-78EDD33926B9}</Project>
+      <Name>example_gapi_text_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\hfs\example_hfs_example.vcxproj">
+      <Project>{63A1254B-53E1-310A-B8D3-D1D453180664}</Project>
+      <Name>example_hfs_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\img_hash\example_img_hash_hash_samples.vcxproj">
+      <Project>{2CAE96D1-A555-3A1E-8524-D4C1C87B137C}</Project>
+      <Name>example_img_hash_hash_samples</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\intensity_transform\example_intensity_transform_intensity_transform.vcxproj">
+      <Project>{6A1F766E-8746-320E-BEF5-6301FEFE1BCC}</Project>
+      <Name>example_intensity_transform_intensity_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\example_line_descriptor_compute_descriptors.vcxproj">
+      <Project>{5145C519-C290-3B6D-9E75-F09C5F2BBAFE}</Project>
+      <Name>example_line_descriptor_compute_descriptors</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\example_line_descriptor_knn_matching.vcxproj">
+      <Project>{12A16543-159F-3494-9593-985560E0025F}</Project>
+      <Name>example_line_descriptor_knn_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\example_line_descriptor_lines_extraction.vcxproj">
+      <Project>{FD0FCE6E-EFB9-33A0-80C1-159E95CA6A02}</Project>
+      <Name>example_line_descriptor_lines_extraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\example_line_descriptor_lsd_lines_extraction.vcxproj">
+      <Project>{5782F4DE-3965-30DE-A8EA-BF16DF5982C2}</Project>
+      <Name>example_line_descriptor_lsd_lines_extraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\example_line_descriptor_matching.vcxproj">
+      <Project>{F2876B70-674A-3EF6-AA01-EAFD1F1BC894}</Project>
+      <Name>example_line_descriptor_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\example_line_descriptor_radius_matching.vcxproj">
+      <Project>{2CD712E7-D0F1-3577-BD9D-AB4F151DC593}</Project>
+      <Name>example_line_descriptor_radius_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\mcc\example_mcc_chart_detection.vcxproj">
+      <Project>{22421440-41F2-3EFB-8513-F1E8FDA27188}</Project>
+      <Name>example_mcc_chart_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\mcc\example_mcc_chart_detection_with_network.vcxproj">
+      <Project>{09A6DC65-36B4-38D6-A9E2-83B5B8EE7387}</Project>
+      <Name>example_mcc_chart_detection_with_network</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\mcc\example_mcc_color_correction_model.vcxproj">
+      <Project>{94A035F3-0D1A-3AA3-B5D2-BF530EECE1E9}</Project>
+      <Name>example_mcc_color_correction_model</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_gpc_evaluate.vcxproj">
+      <Project>{E108C51E-84E9-3B33-8A69-EA1389B729B0}</Project>
+      <Name>example_optflow_gpc_evaluate</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_gpc_train.vcxproj">
+      <Project>{E6FEC881-A5C0-3173-907A-898ED0499051}</Project>
+      <Name>example_optflow_gpc_train</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_motempl.vcxproj">
+      <Project>{F1888BAB-E331-338A-A3BB-9133D0DCEA94}</Project>
+      <Name>example_optflow_motempl</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_optical_flow_evaluation.vcxproj">
+      <Project>{155C08A7-55CB-3198-A73D-EB9E3B72744F}</Project>
+      <Name>example_optflow_optical_flow_evaluation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_pcaflow_demo.vcxproj">
+      <Project>{A1AB1EB8-7635-32AA-BB15-CA3A30C54F79}</Project>
+      <Name>example_optflow_pcaflow_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_simpleflow_demo.vcxproj">
+      <Project>{18D44EB5-EA17-3691-ACFA-4DE5161289E8}</Project>
+      <Name>example_optflow_simpleflow_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\example_optflow_tvl1_optical_flow.vcxproj">
+      <Project>{95BAC375-0061-362D-93DC-44B8EB2F4FE9}</Project>
+      <Name>example_optflow_tvl1_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\phase_unwrapping\example_phase_unwrapping_unwrap.vcxproj">
+      <Project>{3CF8453C-5B26-340E-B5B3-FA8329648759}</Project>
+      <Name>example_phase_unwrapping_unwrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\plot\example_plot_plot_demo.vcxproj">
+      <Project>{8374E537-0DFD-3A5F-94CB-9AFED34868A8}</Project>
+      <Name>example_plot_plot_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\quality\example_quality_brisque_eval_tid2008.vcxproj">
+      <Project>{570E1B1B-514F-3439-924B-6A9BD475E1D9}</Project>
+      <Name>example_quality_brisque_eval_tid2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\quality\example_quality_brisque_trainer_livedb.vcxproj">
+      <Project>{B425960A-C3A8-336E-8C05-E44190DB015F}</Project>
+      <Name>example_quality_brisque_trainer_livedb</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\reg\example_reg_map_test.vcxproj">
+      <Project>{54E01955-6859-367C-8345-565CAC55A0E6}</Project>
+      <Name>example_reg_map_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\example_rgbd_colored_kinfu_demo.vcxproj">
+      <Project>{90F17F5A-7B4D-37E2-8BC7-4B197ADA2F35}</Project>
+      <Name>example_rgbd_colored_kinfu_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\example_rgbd_dynafu_demo.vcxproj">
+      <Project>{C2980D13-A784-3E47-9D96-382B622C26F7}</Project>
+      <Name>example_rgbd_dynafu_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\example_rgbd_kinfu_demo.vcxproj">
+      <Project>{FB422FBE-4217-39D8-AFF2-DAB4DEC85A20}</Project>
+      <Name>example_rgbd_kinfu_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\example_rgbd_large_kinfu_demo.vcxproj">
+      <Project>{E6BE0659-74B0-32C3-A95A-5D63EF06DC6F}</Project>
+      <Name>example_rgbd_large_kinfu_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\example_rgbd_linemod.vcxproj">
+      <Project>{84DEE957-033F-3693-896E-A336543F6E95}</Project>
+      <Name>example_rgbd_linemod</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\example_rgbd_odometry_evaluation.vcxproj">
+      <Project>{9F09A8E3-5EF0-38D5-84F2-146FC99A1F09}</Project>
+      <Name>example_rgbd_odometry_evaluation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\saliency\example_saliency_computeSaliency.vcxproj">
+      <Project>{96C937CE-AE53-33D9-8169-3F973C5EA94E}</Project>
+      <Name>example_saliency_computeSaliency</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\shape\example_shape_shape_example.vcxproj">
+      <Project>{AFDC1166-7A22-36ED-B5C8-0D188FB5D47E}</Project>
+      <Name>example_shape_shape_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_core_mat_checkVector.vcxproj">
+      <Project>{EEFA537A-4BE2-3149-A7FC-4099370C2DA7}</Project>
+      <Name>example_snippet_core_mat_checkVector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_core_merge.vcxproj">
+      <Project>{19B81FEB-ADF5-3763-85A1-19513520DF6A}</Project>
+      <Name>example_snippet_core_merge</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_core_reduce.vcxproj">
+      <Project>{DE35E755-DEB2-37AA-8661-5BE8F8039A87}</Project>
+      <Name>example_snippet_core_reduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_core_split.vcxproj">
+      <Project>{8E031912-97F6-3C43-9E3D-934A1432F8F2}</Project>
+      <Name>example_snippet_core_split</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_core_various.vcxproj">
+      <Project>{6272FD87-68A0-3390-81E9-93EAD80AAB31}</Project>
+      <Name>example_snippet_core_various</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgcodecs_imwrite.vcxproj">
+      <Project>{B93A59DE-0F30-371F-A6E3-B96BE802E1CB}</Project>
+      <Name>example_snippet_imgcodecs_imwrite</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_HoughLinesCircles.vcxproj">
+      <Project>{6773C635-305F-35DA-B20B-E0EE51F609F7}</Project>
+      <Name>example_snippet_imgproc_HoughLinesCircles</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_HoughLinesP.vcxproj">
+      <Project>{485D65BE-6114-38A4-AF85-3970E15FC0B3}</Project>
+      <Name>example_snippet_imgproc_HoughLinesP</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_HoughLinesPointSet.vcxproj">
+      <Project>{758C01D4-261A-3605-8AB2-500B724AB46D}</Project>
+      <Name>example_snippet_imgproc_HoughLinesPointSet</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_applyColorMap.vcxproj">
+      <Project>{00F36CD4-1A80-3F77-9F1D-4AFBCBB4ABF4}</Project>
+      <Name>example_snippet_imgproc_applyColorMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_calcHist.vcxproj">
+      <Project>{C06EB038-4F9A-3D29-AC29-0E812460E03C}</Project>
+      <Name>example_snippet_imgproc_calcHist</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_drawContours.vcxproj">
+      <Project>{6C74C104-C845-3F59-8A31-D159217A738F}</Project>
+      <Name>example_snippet_imgproc_drawContours</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_snippet_imgproc_segmentation.vcxproj">
+      <Project>{D2BB93F9-491A-3D71-AD41-D138B1EDCB00}</Project>
+      <Name>example_snippet_imgproc_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stereo\example_stereo_dense_disparity.vcxproj">
+      <Project>{E512E7E1-4AED-3ED7-AF2F-0D7B96416781}</Project>
+      <Name>example_stereo_dense_disparity</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stereo\example_stereo_export_param_file.vcxproj">
+      <Project>{898B8FA6-44A2-3EF7-97ED-9C93DDDC8284}</Project>
+      <Name>example_stereo_export_param_file</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stereo\example_stereo_sample.vcxproj">
+      <Project>{E239E878-7C9B-3732-BC43-9032C0C61729}</Project>
+      <Name>example_stereo_sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\structured_light\example_structured_light_cap_pattern.vcxproj">
+      <Project>{FB0616FB-9D5F-34A3-8D6D-055CA66A0096}</Project>
+      <Name>example_structured_light_cap_pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\structured_light\example_structured_light_capsinpattern.vcxproj">
+      <Project>{77372F7C-ABAA-3757-A62C-7CF0CAEFC6E3}</Project>
+      <Name>example_structured_light_capsinpattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\structured_light\example_structured_light_pointcloud.vcxproj">
+      <Project>{50FD821B-2230-3AE6-A081-D3363A2D570E}</Project>
+      <Name>example_structured_light_pointcloud</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\structured_light\example_structured_light_projectorcalibration.vcxproj">
+      <Project>{BEEBD590-1AAA-36E9-AA07-9E4623A8C8C3}</Project>
+      <Name>example_structured_light_projectorcalibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\surface_matching\example_surface_matching_ppf_load_match.vcxproj">
+      <Project>{1B514E47-05F8-3E3B-B310-98D307A22737}</Project>
+      <Name>example_surface_matching_ppf_load_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\surface_matching\example_surface_matching_ppf_normal_computation.vcxproj">
+      <Project>{E0837B90-1231-3AFB-A683-882E4349A00C}</Project>
+      <Name>example_surface_matching_ppf_normal_computation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_bgfg_segm.vcxproj">
+      <Project>{2E7B326A-580F-3C0E-8D10-901E5AF0E8C7}</Project>
+      <Name>example_tapi_bgfg_segm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_camshift.vcxproj">
+      <Project>{8842DE84-BA09-32DC-9160-D42C2675B90A}</Project>
+      <Name>example_tapi_camshift</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_clahe.vcxproj">
+      <Project>{F4C95B30-D169-3764-9F58-5E9BA5DBE781}</Project>
+      <Name>example_tapi_clahe</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_dense_optical_flow.vcxproj">
+      <Project>{2A4A308D-94DA-3F94-B92B-7F3E32D90623}</Project>
+      <Name>example_tapi_dense_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_hog.vcxproj">
+      <Project>{FDD1873C-274D-3DFF-90D3-3C2862B8D5E6}</Project>
+      <Name>example_tapi_hog</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_opencl_custom_kernel.vcxproj">
+      <Project>{5D543F1A-C284-3950-B189-6735F486E974}</Project>
+      <Name>example_tapi_opencl_custom_kernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_pyrlk_optical_flow.vcxproj">
+      <Project>{F82B4CE2-C08B-353E-9FC9-E465610310D5}</Project>
+      <Name>example_tapi_pyrlk_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_squares.vcxproj">
+      <Project>{2DDB15F7-A1EF-32A5-A3E3-F572FF1A8181}</Project>
+      <Name>example_tapi_squares</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_ufacedetect.vcxproj">
+      <Project>{069CCE36-DA33-300A-971D-294B5BC12A70}</Project>
+      <Name>example_tapi_ufacedetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\tapi\example_tapi_video_acceleration.vcxproj">
+      <Project>{E0D9755A-2AC4-3B71-9B02-27A503B69978}</Project>
+      <Name>example_tapi_video_acceleration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_character_recognition.vcxproj">
+      <Project>{C0B7FE79-74D1-329C-A79B-8AEEC2ED6266}</Project>
+      <Name>example_text_character_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_cropped_word_recognition.vcxproj">
+      <Project>{A1439455-8298-3BE5-8F3C-A95A3B51D326}</Project>
+      <Name>example_text_cropped_word_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_dictnet_demo.vcxproj">
+      <Project>{61997CC7-8534-31E4-8590-5FAA2C58AAED}</Project>
+      <Name>example_text_dictnet_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_end_to_end_recognition.vcxproj">
+      <Project>{1864961D-C34F-3054-B830-26D1D45BC2F9}</Project>
+      <Name>example_text_end_to_end_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_segmented_word_recognition.vcxproj">
+      <Project>{DAF63A2D-1918-3D69-A4FA-9E0252608DD0}</Project>
+      <Name>example_text_segmented_word_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_text_recognition_cnn.vcxproj">
+      <Project>{D68B69F8-715C-38E3-9514-66080A437325}</Project>
+      <Name>example_text_text_recognition_cnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_textbox_demo.vcxproj">
+      <Project>{99DB715F-F06B-33E8-84C2-5686B8AE5383}</Project>
+      <Name>example_text_textbox_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_textdetection.vcxproj">
+      <Project>{AA7E74F0-478D-3B61-8C27-494F58492DB7}</Project>
+      <Name>example_text_textdetection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_textdetection_swt.vcxproj">
+      <Project>{5A921F3F-9436-3208-BC5B-1B906F08D30D}</Project>
+      <Name>example_text_textdetection_swt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\example_text_webcam_demo.vcxproj">
+      <Project>{2FE9B8E5-3CF6-3535-BDB4-2953837F31CD}</Project>
+      <Name>example_text_webcam_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_benchmark.vcxproj">
+      <Project>{7C50B539-8FDF-3EE8-BEEE-D96B9ABD754A}</Project>
+      <Name>example_tracking_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_csrt.vcxproj">
+      <Project>{78CABE77-4EC9-30CA-BFAE-9DF57FCDA561}</Project>
+      <Name>example_tracking_csrt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_goturnTracker.vcxproj">
+      <Project>{8F511D98-F12E-33AA-A487-42EE60F69070}</Project>
+      <Name>example_tracking_goturnTracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_kcf.vcxproj">
+      <Project>{8C24D108-D1EB-30F3-A8B5-B770A4734696}</Project>
+      <Name>example_tracking_kcf</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_multiTracker_dataset.vcxproj">
+      <Project>{0F198E8D-44DC-3712-BD1D-A17978B06956}</Project>
+      <Name>example_tracking_multiTracker_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_multitracker.vcxproj">
+      <Project>{31021186-EB3E-376C-A3AA-23CB1060BB9F}</Project>
+      <Name>example_tracking_multitracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_tracker.vcxproj">
+      <Project>{B9B9B30F-53F2-32B0-B5D6-E31A16EAF5E3}</Project>
+      <Name>example_tracking_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_tracker_dataset.vcxproj">
+      <Project>{2826D562-1A34-3D27-B0CB-CDCCDC00E72C}</Project>
+      <Name>example_tracking_tracker_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_tracking_by_matching.vcxproj">
+      <Project>{601557E7-EC5B-3A1D-B5AB-B82D577C3FE2}</Project>
+      <Name>example_tracking_tracking_by_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_tutorial_customizing_cn_tracker.vcxproj">
+      <Project>{1EF8D5C4-4875-3CBC-A063-9F7CE5E9C718}</Project>
+      <Name>example_tracking_tutorial_customizing_cn_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_tutorial_introduction_to_tracker.vcxproj">
+      <Project>{AC1A38F7-0074-3136-8D68-E89DEDA0DBD6}</Project>
+      <Name>example_tracking_tutorial_introduction_to_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\example_tracking_tutorial_multitracker.vcxproj">
+      <Project>{9B18BD75-A45E-3800-A393-F8FB765E8844}</Project>
+      <Name>example_tracking_tutorial_multitracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_AKAZE_match.vcxproj">
+      <Project>{F563FD49-3589-3AE3-BCBC-FA9B3549E6A5}</Project>
+      <Name>example_tutorial_AKAZE_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_AddingImages.vcxproj">
+      <Project>{18395AB0-1D60-389D-A1C3-4FC5D3D76403}</Project>
+      <Name>example_tutorial_AddingImages</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_AddingImagesTrackbar.vcxproj">
+      <Project>{75C70FA5-E163-3BB5-91AE-FDE61631183E}</Project>
+      <Name>example_tutorial_AddingImagesTrackbar</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_BasicLinearTransforms.vcxproj">
+      <Project>{81AF75A6-12A3-3B18-9CC7-63F23BB06537}</Project>
+      <Name>example_tutorial_BasicLinearTransforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_BasicLinearTransformsTrackbar.vcxproj">
+      <Project>{BBB51E29-DA39-3436-B2D6-6DD64EC2545B}</Project>
+      <Name>example_tutorial_BasicLinearTransformsTrackbar</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_CannyDetector_Demo.vcxproj">
+      <Project>{7D355D43-7E2D-3F01-A678-EC5B674C1DE5}</Project>
+      <Name>example_tutorial_CannyDetector_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Drawing_1.vcxproj">
+      <Project>{23E53CFA-3A32-3C86-B571-8B762776ADCC}</Project>
+      <Name>example_tutorial_Drawing_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Drawing_2.vcxproj">
+      <Project>{F0265992-6DEC-361C-83C5-16E1DFFFDD63}</Project>
+      <Name>example_tutorial_Drawing_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_EqualizeHist_Demo.vcxproj">
+      <Project>{07F51865-7910-3F86-8B94-D913B1FB0414}</Project>
+      <Name>example_tutorial_EqualizeHist_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Geometric_Transforms_Demo.vcxproj">
+      <Project>{B7F1910A-2E03-3E6B-A684-C791C817A1FA}</Project>
+      <Name>example_tutorial_Geometric_Transforms_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_HitMiss.vcxproj">
+      <Project>{4486D1CE-1DA6-39A3-A2B0-6532DA141BF7}</Project>
+      <Name>example_tutorial_HitMiss</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_HoughCircle_Demo.vcxproj">
+      <Project>{E78DE5BC-E5FA-37EA-82FB-F871BA8F9D86}</Project>
+      <Name>example_tutorial_HoughCircle_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_HoughLines_Demo.vcxproj">
+      <Project>{35DF3A3C-D14A-355D-A0F4-3F348D3644AB}</Project>
+      <Name>example_tutorial_HoughLines_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_LATCH_match.vcxproj">
+      <Project>{44820B45-01D3-323E-B91B-CBD063EB60A7}</Project>
+      <Name>example_tutorial_LATCH_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Laplace_Demo.vcxproj">
+      <Project>{EFBB51FE-EFF1-35B2-A73B-384E60A49A10}</Project>
+      <Name>example_tutorial_Laplace_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_MatchTemplate_Demo.vcxproj">
+      <Project>{8CEFC7A8-CA55-3154-B210-0C8F07530DBC}</Project>
+      <Name>example_tutorial_MatchTemplate_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Morphology_1.vcxproj">
+      <Project>{6302FC51-61F3-3188-B9BC-39B5EE66C817}</Project>
+      <Name>example_tutorial_Morphology_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Morphology_2.vcxproj">
+      <Project>{952C57DD-819A-3DAC-A015-51D50F8A934A}</Project>
+      <Name>example_tutorial_Morphology_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Morphology_3.vcxproj">
+      <Project>{3A6B6A85-FB1A-3AA5-B89C-6B978E56C810}</Project>
+      <Name>example_tutorial_Morphology_3</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Pyramids.vcxproj">
+      <Project>{C2B3A859-FBA0-3272-979B-55F550C80BDD}</Project>
+      <Name>example_tutorial_Pyramids</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Remap_Demo.vcxproj">
+      <Project>{41BE630A-41F6-3309-9DF6-01AC000D3CFB}</Project>
+      <Name>example_tutorial_Remap_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_SURF_FLANN_matching_Demo.vcxproj">
+      <Project>{5640189B-B376-35D0-A720-0B33C8E9173D}</Project>
+      <Name>example_tutorial_SURF_FLANN_matching_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_SURF_FLANN_matching_homography_Demo.vcxproj">
+      <Project>{B471EF35-C77A-3F57-859F-9EC09F21EA84}</Project>
+      <Name>example_tutorial_SURF_FLANN_matching_homography_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_SURF_detection_Demo.vcxproj">
+      <Project>{21C40E9B-5A52-3C15-ACEA-F2A92BA9E61D}</Project>
+      <Name>example_tutorial_SURF_detection_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_SURF_matching_Demo.vcxproj">
+      <Project>{1CDB54C1-21AE-3DDB-A28A-D6C49099B8C6}</Project>
+      <Name>example_tutorial_SURF_matching_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Smoothing.vcxproj">
+      <Project>{1B6062EA-9281-3B5F-8B9E-3126065D65FE}</Project>
+      <Name>example_tutorial_Smoothing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Sobel_Demo.vcxproj">
+      <Project>{7D0BE6C3-3488-38FB-BFB4-3764C5A09BBE}</Project>
+      <Name>example_tutorial_Sobel_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Threshold.vcxproj">
+      <Project>{0CBB602A-4F11-3D57-A48D-E9D99ADF9221}</Project>
+      <Name>example_tutorial_Threshold</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_Threshold_inRange.vcxproj">
+      <Project>{F71EA42F-22C2-32CC-83E2-5BFE4FB6C2D6}</Project>
+      <Name>example_tutorial_Threshold_inRange</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_age_gender_emotion_recognition.vcxproj">
+      <Project>{8582E077-6CCC-33F5-AAE4-3FD1F3FF7E0C}</Project>
+      <Name>example_tutorial_age_gender_emotion_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_anisotropic_image_segmentation.vcxproj">
+      <Project>{87E9CE81-F8A5-3534-B61E-6E282CE9D9F5}</Project>
+      <Name>example_tutorial_anisotropic_image_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_api_ref_snippets.vcxproj">
+      <Project>{8CBC8547-A719-33C6-BE5D-998659C4949E}</Project>
+      <Name>example_tutorial_api_ref_snippets</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_bg_sub.vcxproj">
+      <Project>{68E9700E-3180-3CBF-9B17-5B3E1678F298}</Project>
+      <Name>example_tutorial_bg_sub</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_calcBackProject_Demo1.vcxproj">
+      <Project>{F639D3FF-4034-3B16-AB13-0AFAD7281ACF}</Project>
+      <Name>example_tutorial_calcBackProject_Demo1</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_calcBackProject_Demo2.vcxproj">
+      <Project>{347570D7-0286-3773-867E-A312CE5865BB}</Project>
+      <Name>example_tutorial_calcBackProject_Demo2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_calcHist_Demo.vcxproj">
+      <Project>{5F79D6AB-ACA4-3659-B3BF-5805332A2F15}</Project>
+      <Name>example_tutorial_calcHist_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_calibrate_camera.vcxproj">
+      <Project>{DA765218-6C35-3157-AD72-1438B02EBF35}</Project>
+      <Name>example_tutorial_calibrate_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_calibrate_camera_charuco.vcxproj">
+      <Project>{B6B60AD6-BFD6-39AD-B723-9B537DD21892}</Project>
+      <Name>example_tutorial_calibrate_camera_charuco</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_camera_calibration.vcxproj">
+      <Project>{DA671AC4-2936-37C6-907A-364F60F0444B}</Project>
+      <Name>example_tutorial_camera_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_camshift.vcxproj">
+      <Project>{CA81AED3-48FF-3501-8A31-B6B4EA5D1AF9}</Project>
+      <Name>example_tutorial_camshift</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_changing_contrast_brightness_image.vcxproj">
+      <Project>{DEF7F478-4F84-3C99-ACBD-1C67DC88285B}</Project>
+      <Name>example_tutorial_changing_contrast_brightness_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_cloning_demo.vcxproj">
+      <Project>{76D4ADDD-D583-381C-908E-04288D0539A5}</Project>
+      <Name>example_tutorial_cloning_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_cloning_gui.vcxproj">
+      <Project>{04B94DA2-278C-3486-8B36-BDC43707AC40}</Project>
+      <Name>example_tutorial_cloning_gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_compareHist_Demo.vcxproj">
+      <Project>{B6120D13-FB61-3F87-B75A-0C27775DFE42}</Project>
+      <Name>example_tutorial_compareHist_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_compatibility_test.vcxproj">
+      <Project>{4BEDC589-7B95-3932-987B-D898632F2809}</Project>
+      <Name>example_tutorial_compatibility_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_copyMakeBorder_demo.vcxproj">
+      <Project>{14229225-9FE6-3007-B637-56C9B1B4B649}</Project>
+      <Name>example_tutorial_copyMakeBorder_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_cornerDetector_Demo.vcxproj">
+      <Project>{FD9DCE83-6C0D-3640-B58C-AC688722A790}</Project>
+      <Name>example_tutorial_cornerDetector_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_cornerHarris_Demo.vcxproj">
+      <Project>{4D8A7839-D57D-32D3-BEDD-AC49113DFE1F}</Project>
+      <Name>example_tutorial_cornerHarris_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_cornerSubPix_Demo.vcxproj">
+      <Project>{73CE3B26-9972-31A5-BB3A-44205AA781D4}</Project>
+      <Name>example_tutorial_cornerSubPix_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_create_board.vcxproj">
+      <Project>{E5F660A0-37E7-36A4-9C75-A9870FE8FDAC}</Project>
+      <Name>example_tutorial_create_board</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_create_board_charuco.vcxproj">
+      <Project>{3F2C8036-A7E2-3334-9EC4-97F4661687BF}</Project>
+      <Name>example_tutorial_create_board_charuco</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_create_diamond.vcxproj">
+      <Project>{EC4BE64B-859D-3674-93CD-E2749C49205A}</Project>
+      <Name>example_tutorial_create_diamond</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_create_marker.vcxproj">
+      <Project>{284B91AE-9635-3EB9-A5A2-1C1AEE79C75C}</Project>
+      <Name>example_tutorial_create_marker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_decolor.vcxproj">
+      <Project>{8E8939D9-3FB7-30AF-AB1A-39A2E47D834E}</Project>
+      <Name>example_tutorial_decolor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_decompose_homography.vcxproj">
+      <Project>{D705F5F5-ACE2-3B13-81F3-0CE0EBDE4AD7}</Project>
+      <Name>example_tutorial_decompose_homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_detect_board.vcxproj">
+      <Project>{223FBB3F-322D-3159-8FB8-29CF225051E3}</Project>
+      <Name>example_tutorial_detect_board</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_detect_board_charuco.vcxproj">
+      <Project>{2746B1F5-B128-368A-99C8-3F9452548B58}</Project>
+      <Name>example_tutorial_detect_board_charuco</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_detect_diamonds.vcxproj">
+      <Project>{E104EA32-F97B-3788-BFC6-3F6571262CCD}</Project>
+      <Name>example_tutorial_detect_diamonds</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_detect_markers.vcxproj">
+      <Project>{1BD8E80E-EF4D-3F0C-B103-EBA31A1C283C}</Project>
+      <Name>example_tutorial_detect_markers</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_discrete_fourier_transform.vcxproj">
+      <Project>{750DA9C5-29C4-3EC3-A14D-692E7458699C}</Project>
+      <Name>example_tutorial_discrete_fourier_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_display_image.vcxproj">
+      <Project>{BEE7099F-CC8D-38B4-BBA9-B4FAC0E8DC83}</Project>
+      <Name>example_tutorial_display_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_documentation.vcxproj">
+      <Project>{5541EE24-94E6-339C-B84C-7DE9917BFCE1}</Project>
+      <Name>example_tutorial_documentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_dynamic_graph_snippets.vcxproj">
+      <Project>{02D1C49A-1350-3FDB-A97C-DCACB2785C38}</Project>
+      <Name>example_tutorial_dynamic_graph_snippets</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_face_beautification.vcxproj">
+      <Project>{5F2C7F66-9407-374E-A6A4-C4A31E23B9AB}</Project>
+      <Name>example_tutorial_face_beautification</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_file_input_output.vcxproj">
+      <Project>{CC9402BF-3D25-37C3-A8A6-70A1E57A3070}</Project>
+      <Name>example_tutorial_file_input_output</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_filter2D_demo.vcxproj">
+      <Project>{4EDCC78D-1470-3A29-B7D5-B3FDF1C5AC34}</Project>
+      <Name>example_tutorial_filter2D_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_findContours_demo.vcxproj">
+      <Project>{783E7BF1-8740-3029-B46A-918E4883A0F2}</Project>
+      <Name>example_tutorial_findContours_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_gdal-image.vcxproj">
+      <Project>{68958859-9D27-3A48-8672-73CC06551B95}</Project>
+      <Name>example_tutorial_gdal-image</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_generalContours_demo1.vcxproj">
+      <Project>{A87F4E44-59D0-3230-ACA6-76C060E618D1}</Project>
+      <Name>example_tutorial_generalContours_demo1</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_generalContours_demo2.vcxproj">
+      <Project>{21806E84-10A1-3975-AC0C-A470DBCE8BB7}</Project>
+      <Name>example_tutorial_generalContours_demo2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_generalizedHoughTransform.vcxproj">
+      <Project>{38015E2F-688D-3738-8878-1785DE98EA15}</Project>
+      <Name>example_tutorial_generalizedHoughTransform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_goodFeaturesToTrack_Demo.vcxproj">
+      <Project>{B93E5BCE-7364-3ABA-B22E-2B29D1800FB5}</Project>
+      <Name>example_tutorial_goodFeaturesToTrack_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_hdr_imaging.vcxproj">
+      <Project>{E2C81BAB-0D2D-3624-8BF0-7C0BDCCF3D54}</Project>
+      <Name>example_tutorial_hdr_imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_homography_from_camera_displacement.vcxproj">
+      <Project>{27F9FA65-E595-3A3C-BC06-DF6F965C4523}</Project>
+      <Name>example_tutorial_homography_from_camera_displacement</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_houghcircles.vcxproj">
+      <Project>{A68CC920-D381-3682-9752-0DFB4CD0EF5E}</Project>
+      <Name>example_tutorial_houghcircles</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_houghlines.vcxproj">
+      <Project>{08F7D8AB-8D8A-3406-91C3-E0F861591CCF}</Project>
+      <Name>example_tutorial_houghlines</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_how_to_scan_images.vcxproj">
+      <Project>{CED4C351-3C47-3FD2-86C2-8E382519B745}</Project>
+      <Name>example_tutorial_how_to_scan_images</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_how_to_use_OpenCV_parallel_for_.vcxproj">
+      <Project>{EF3353EE-A9BA-3F79-A62D-753E8AED2B27}</Project>
+      <Name>example_tutorial_how_to_use_OpenCV_parallel_for_</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_how_to_use_OpenCV_parallel_for_new.vcxproj">
+      <Project>{102EFA91-91C6-3557-AA70-CAD0EF5723D8}</Project>
+      <Name>example_tutorial_how_to_use_OpenCV_parallel_for_new</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_hull_demo.vcxproj">
+      <Project>{5A682056-81BB-3F6F-92E7-AD020E347992}</Project>
+      <Name>example_tutorial_hull_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_imageSegmentation.vcxproj">
+      <Project>{D63F3566-AEE6-3B0F-AF6E-E5EFC3BEC847}</Project>
+      <Name>example_tutorial_imageSegmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_introduction_to_pca.vcxproj">
+      <Project>{7B56F2D2-4A5F-3FC8-B14F-E17F385DDBF6}</Project>
+      <Name>example_tutorial_introduction_to_pca</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_introduction_to_svm.vcxproj">
+      <Project>{958D5A17-AB63-30C9-BA04-927239C02488}</Project>
+      <Name>example_tutorial_introduction_to_svm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_introduction_windows_vs.vcxproj">
+      <Project>{E42DE655-C5A6-3E76-8F6D-1CFC61F7D4C6}</Project>
+      <Name>example_tutorial_introduction_windows_vs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_kernel_api_snippets.vcxproj">
+      <Project>{840A1869-7AE8-33B4-A5DA-E5FCDA041E3D}</Project>
+      <Name>example_tutorial_kernel_api_snippets</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_mat_mask_operations.vcxproj">
+      <Project>{DCA421D1-6365-3B9F-968A-6FD2DD6BE2A5}</Project>
+      <Name>example_tutorial_mat_mask_operations</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_mat_operations.vcxproj">
+      <Project>{D5018D2C-2C86-38EC-A04A-83025EDBEBF1}</Project>
+      <Name>example_tutorial_mat_operations</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_mat_the_basic_image_container.vcxproj">
+      <Project>{1E5FBB4D-8297-3472-BE4C-A2C1005FEE08}</Project>
+      <Name>example_tutorial_mat_the_basic_image_container</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_meanshift.vcxproj">
+      <Project>{5ECA21A0-A3B2-3569-99CD-834A0C387357}</Project>
+      <Name>example_tutorial_meanshift</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_moments_demo.vcxproj">
+      <Project>{ECF33D3A-0DA4-3634-9D13-242DD7FB61F3}</Project>
+      <Name>example_tutorial_moments_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_motion_deblur_filter.vcxproj">
+      <Project>{F8D4A928-4A22-3CFF-9F23-E9264806C05E}</Project>
+      <Name>example_tutorial_motion_deblur_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_non_linear_svms.vcxproj">
+      <Project>{15ACFBAA-865E-3A07-938A-573A71079837}</Project>
+      <Name>example_tutorial_non_linear_svms</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_npr_demo.vcxproj">
+      <Project>{C544417C-A711-341E-BD3F-1F6C2DC8EF1B}</Project>
+      <Name>example_tutorial_npr_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_objectDetection.vcxproj">
+      <Project>{1524143B-D125-3FBA-862F-5978CB65BFFE}</Project>
+      <Name>example_tutorial_objectDetection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_optical_flow.vcxproj">
+      <Project>{6DD3E3C9-19D5-39A7-B130-83A2065017BC}</Project>
+      <Name>example_tutorial_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_optical_flow_dense.vcxproj">
+      <Project>{965199F0-A1C3-3F1A-9BAB-1C82F31D8175}</Project>
+      <Name>example_tutorial_optical_flow_dense</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_orbbec_astra.vcxproj">
+      <Project>{470ED9F1-1A2A-386A-B663-EB8B006ADA93}</Project>
+      <Name>example_tutorial_orbbec_astra</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_out_of_focus_deblur_filter.vcxproj">
+      <Project>{7A81EA81-5448-3599-BF77-F63527EF3CDD}</Project>
+      <Name>example_tutorial_out_of_focus_deblur_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_panorama_stitching_rotating_camera.vcxproj">
+      <Project>{999D0E0A-8405-3A36-A2C1-09149E31E763}</Project>
+      <Name>example_tutorial_panorama_stitching_rotating_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_periodic_noise_removing_filter.vcxproj">
+      <Project>{B4F488C4-52A0-39F2-AEBA-F640C5F2F04B}</Project>
+      <Name>example_tutorial_periodic_noise_removing_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_perspective_correction.vcxproj">
+      <Project>{4D27BF3D-9208-3AD8-A9F1-EDE9E6D915A2}</Project>
+      <Name>example_tutorial_perspective_correction</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_planar_tracking.vcxproj">
+      <Project>{B31835F7-4C6B-3365-9275-D8DAA1F8DE74}</Project>
+      <Name>example_tutorial_planar_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_pnp_detection.vcxproj">
+      <Project>{7ED874A9-9679-3652-A78E-4C669435E322}</Project>
+      <Name>example_tutorial_pnp_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_pnp_registration.vcxproj">
+      <Project>{6586462E-C46E-378A-BF38-E05E5DD64258}</Project>
+      <Name>example_tutorial_pnp_registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_pointPolygonTest_demo.vcxproj">
+      <Project>{39A4066D-0978-3C77-9B66-6D9FB94640C6}</Project>
+      <Name>example_tutorial_pointPolygonTest_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_porting_anisotropic_image_segmentation_gapi.vcxproj">
+      <Project>{BAB0CF52-F360-3EA5-A8B7-7049A74479DC}</Project>
+      <Name>example_tutorial_porting_anisotropic_image_segmentation_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.vcxproj">
+      <Project>{5085FF9D-F74B-38AD-A837-6A2A0B910BF2}</Project>
+      <Name>example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_pose_from_homography.vcxproj">
+      <Project>{BF1F6803-3FBD-38AC-8D5E-1B8D2F51A881}</Project>
+      <Name>example_tutorial_pose_from_homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_security_barrier_camera.vcxproj">
+      <Project>{CA5CF6F4-F8CB-3870-A6E6-9F283750EFD3}</Project>
+      <Name>example_tutorial_security_barrier_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_univ_intrin.vcxproj">
+      <Project>{B1E251BE-C3B3-34B0-B55E-4D111A8163CD}</Project>
+      <Name>example_tutorial_univ_intrin</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_video-input-psnr-ssim.vcxproj">
+      <Project>{8152E598-316D-3EC6-AB82-4865375C5114}</Project>
+      <Name>example_tutorial_video-input-psnr-ssim</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\samples\cpp\example_tutorial_video-write.vcxproj">
+      <Project>{C0EB2ED1-5EC5-3CAA-B110-BE22D7BCE61F}</Project>
+      <Name>example_tutorial_video-write</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\videostab\example_videostab_videostab.vcxproj">
+      <Project>{50C64703-9F0C-3B9B-8DCA-6DC019F9C144}</Project>
+      <Name>example_videostab_videostab</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\wechat_qrcode\example_wechat_qrcode_qrcode_example.vcxproj">
+      <Project>{6802AD45-AFC4-3D85-A838-E3C3D9B1351F}</Project>
+      <Name>example_wechat_qrcode_qrcode_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\wechat_qrcode\example_wechat_qrcode_qrcode_example_without_nn.vcxproj">
+      <Project>{76FA0F3C-D3F5-314A-8076-F280A646E7A8}</Project>
+      <Name>example_wechat_qrcode_qrcode_example_without_nn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_bagofwords_classification.vcxproj">
+      <Project>{DAE7225F-C3DB-30D1-881D-08B5BAF5F152}</Project>
+      <Name>example_xfeatures2d_bagofwords_classification</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_gms_matcher.vcxproj">
+      <Project>{A73ECFAE-978C-3A90-89D6-FB70F71A346C}</Project>
+      <Name>example_xfeatures2d_gms_matcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_pct_signatures.vcxproj">
+      <Project>{8F6E96B4-275C-39E9-9B26-67298D6E9BFF}</Project>
+      <Name>example_xfeatures2d_pct_signatures</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_pct_webcam.vcxproj">
+      <Project>{9136D643-C161-3AE0-8C2F-18DD188EDAEB}</Project>
+      <Name>example_xfeatures2d_pct_webcam</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_shape_transformation.vcxproj">
+      <Project>{29B1CCC0-F665-3781-9240-F890C5997BA6}</Project>
+      <Name>example_xfeatures2d_shape_transformation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_surf_matcher.vcxproj">
+      <Project>{04156EC7-F5A9-325F-B5B2-B0EACEE3D347}</Project>
+      <Name>example_xfeatures2d_surf_matcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\example_xfeatures2d_video_homography.vcxproj">
+      <Project>{3A18319C-D07A-3C88-BDA7-9677E6E8E7F9}</Project>
+      <Name>example_xfeatures2d_video_homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_brightedgesexample.vcxproj">
+      <Project>{05507BB2-7277-3DA5-96E5-89CC7D9404A3}</Project>
+      <Name>example_ximgproc_brightedgesexample</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_color_match_template.vcxproj">
+      <Project>{620B9E5C-423C-3673-916E-5C95BFD371F8}</Project>
+      <Name>example_ximgproc_color_match_template</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_colorize.vcxproj">
+      <Project>{7E2D6D51-D570-3C0E-A6D9-F0D2BEC07AA6}</Project>
+      <Name>example_ximgproc_colorize</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_deriche_demo.vcxproj">
+      <Project>{13CF24C0-EEA9-3962-AAD4-370D16989DCD}</Project>
+      <Name>example_ximgproc_deriche_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_disparity_filtering.vcxproj">
+      <Project>{AA6839DD-57E2-3332-91B8-AA518B2075DE}</Project>
+      <Name>example_ximgproc_disparity_filtering</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_edgeboxes_demo.vcxproj">
+      <Project>{0E5514F9-62D6-3FAC-9546-D240C94B770D}</Project>
+      <Name>example_ximgproc_edgeboxes_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_edgepreserving_filter_demo.vcxproj">
+      <Project>{640ED118-1864-307A-B0FB-911B09349B2A}</Project>
+      <Name>example_ximgproc_edgepreserving_filter_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_fast_hough_transform.vcxproj">
+      <Project>{6A26121F-F549-32AE-95F6-8D2875825BDB}</Project>
+      <Name>example_ximgproc_fast_hough_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_filterdemo.vcxproj">
+      <Project>{F9169A87-2E4D-36BA-A00A-8A0D63F295EB}</Project>
+      <Name>example_ximgproc_filterdemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_find_ellipses.vcxproj">
+      <Project>{D752D3D0-10CC-3081-99D8-A0206B9218B1}</Project>
+      <Name>example_ximgproc_find_ellipses</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_fld_lines.vcxproj">
+      <Project>{C76069FB-105F-3876-9E5A-D9FC8A4BE89F}</Project>
+      <Name>example_ximgproc_fld_lines</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_fourier_descriptors_demo.vcxproj">
+      <Project>{A5AE5CD2-5C37-345D-BF37-8A2AFAC1E8A1}</Project>
+      <Name>example_ximgproc_fourier_descriptors_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_graphsegmentation_demo.vcxproj">
+      <Project>{B941A169-4385-3835-814C-C1891B4422AF}</Project>
+      <Name>example_ximgproc_graphsegmentation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_live_demo.vcxproj">
+      <Project>{2048F78F-CD28-3332-BD03-9BF89BB29EF2}</Project>
+      <Name>example_ximgproc_live_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_niblack_thresholding.vcxproj">
+      <Project>{473311C0-DB20-3635-A0C1-DE6BA8521F72}</Project>
+      <Name>example_ximgproc_niblack_thresholding</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_paillou_demo.vcxproj">
+      <Project>{2B93D5A3-7AB9-3560-836C-977FFD7FFAC1}</Project>
+      <Name>example_ximgproc_paillou_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_peilin.vcxproj">
+      <Project>{70E7CBEC-C185-3B03-8F77-FA675290C04E}</Project>
+      <Name>example_ximgproc_peilin</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_radon_transform_demo.vcxproj">
+      <Project>{D08ACEF2-5910-3910-B0E3-B81C088AE070}</Project>
+      <Name>example_ximgproc_radon_transform_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_run_length_morphology_demo.vcxproj">
+      <Project>{ACDB9D2C-B428-365C-9020-A11C9CB31F96}</Project>
+      <Name>example_ximgproc_run_length_morphology_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_seeds.vcxproj">
+      <Project>{F31AE3BA-2267-3A0C-95B9-F951DFCFFD53}</Project>
+      <Name>example_ximgproc_seeds</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_selectivesearchsegmentation_demo.vcxproj">
+      <Project>{4C7B5FDF-61B5-3FB5-8F77-35A89DAEE964}</Project>
+      <Name>example_ximgproc_selectivesearchsegmentation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_slic.vcxproj">
+      <Project>{65AD3A61-A187-30B6-B648-514856DEF17C}</Project>
+      <Name>example_ximgproc_slic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_structured_edge_detection.vcxproj">
+      <Project>{F068E6CE-7500-3747-AC5C-1E0C25590E96}</Project>
+      <Name>example_ximgproc_structured_edge_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\example_ximgproc_thinning.vcxproj">
+      <Project>{7968B840-3E93-3360-BC7F-6174B186353C}</Project>
+      <Name>example_ximgproc_thinning</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\example_xphoto_bm3d_image_denoising.vcxproj">
+      <Project>{027DE8BC-5B2A-3418-8D13-97CBA03DEF5D}</Project>
+      <Name>example_xphoto_bm3d_image_denoising</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\example_xphoto_color_balance.vcxproj">
+      <Project>{4E8A833A-E59E-33B0-971B-F76C549AEB5C}</Project>
+      <Name>example_xphoto_color_balance</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\example_xphoto_dct_image_denoising.vcxproj">
+      <Project>{E1EDFE32-D1ED-3F61-8945-737C49C4D344}</Project>
+      <Name>example_xphoto_dct_image_denoising</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\example_xphoto_inpainting.vcxproj">
+      <Project>{E4D97D55-1D3F-3A32-87F4-2EEE5AAE998B}</Project>
+      <Name>example_xphoto_inpainting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\example_xphoto_oil.vcxproj">
+      <Project>{CA1DB6A1-440B-3E24-A070-50AC8783E562}</Project>
+      <Name>example_xphoto_oil</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\3rdparty\libjpeg-turbo\jsimd.vcxproj">
+      <Project>{7C4CCB3A-FA0D-37DF-86FE-C599EBA56324}</Project>
+      <Name>jsimd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\3rdparty\openjpeg\openjp2\libopenjp2.vcxproj">
+      <Project>{39627E93-87F7-3CCE-8427-16FCA52D46D4}</Project>
+      <Name>libopenjp2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\apps\annotation\opencv_annotation.vcxproj">
+      <Project>{F74EF96F-C71B-3654-AC6C-DB2094F481E8}</Project>
+      <Name>opencv_annotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\aruco\opencv_aruco.vcxproj">
+      <Project>{B0861510-3D61-398C-BD9A-1F83D47B38FF}</Project>
+      <Name>opencv_aruco</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bgsegm\opencv_bgsegm.vcxproj">
+      <Project>{66CC5399-16FA-3241-ADD1-94220B24D4D3}</Project>
+      <Name>opencv_bgsegm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bioinspired\opencv_bioinspired.vcxproj">
+      <Project>{7C11EFA6-33A9-335F-8ACB-0E9EAC196096}</Project>
+      <Name>opencv_bioinspired</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{3D9188BD-4EB9-32EA-BD0C-5FC61EADC496}</Project>
+      <Name>opencv_calib3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ccalib\opencv_ccalib.vcxproj">
+      <Project>{2287007B-DD4B-36C0-88C0-60728A0319F0}</Project>
+      <Name>opencv_ccalib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\core\opencv_core.vcxproj">
+      <Project>{1BF0F426-C00E-3323-AC5A-DC7CC0E26DAE}</Project>
+      <Name>opencv_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\datasets\opencv_datasets.vcxproj">
+      <Project>{7147B994-0757-3E48-8315-4CA1097D78EF}</Project>
+      <Name>opencv_datasets</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn\opencv_dnn.vcxproj">
+      <Project>{3A9B83D2-9104-3685-ADF8-9AF250E97CBA}</Project>
+      <Name>opencv_dnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_objdetect\opencv_dnn_objdetect.vcxproj">
+      <Project>{B93C0AA3-ACE9-3BEC-A33B-DD1F2B85AB4F}</Project>
+      <Name>opencv_dnn_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\opencv_dnn_plugins.vcxproj">
+      <Project>{8E8561D0-0EEB-3738-BFBF-3D46E8D4B52F}</Project>
+      <Name>opencv_dnn_plugins</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\opencv_dnn_superres.vcxproj">
+      <Project>{CFBE502A-DECA-3CF1-A9A1-C6916456508E}</Project>
+      <Name>opencv_dnn_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dpm\opencv_dpm.vcxproj">
+      <Project>{7D847E08-4ED8-3ABE-9A34-4D82AC2B3455}</Project>
+      <Name>opencv_dpm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\opencv_face.vcxproj">
+      <Project>{D7DA98F8-A8DF-30CE-BC89-AF070D6CE773}</Project>
+      <Name>opencv_face</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{6227758E-F394-3FBC-AE97-AE8A098D892E}</Project>
+      <Name>opencv_features2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\flann\opencv_flann.vcxproj">
+      <Project>{01F21B22-8C09-382D-805A-8E85CB10C95C}</Project>
+      <Name>opencv_flann</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\fuzzy\opencv_fuzzy.vcxproj">
+      <Project>{B31559C1-7600-38B9-9082-EBC66E0CAAC7}</Project>
+      <Name>opencv_fuzzy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\opencv_gapi.vcxproj">
+      <Project>{BDB5FA04-6A5D-337B-8233-54E5E14700C4}</Project>
+      <Name>opencv_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\hfs\opencv_hfs.vcxproj">
+      <Project>{93B1741F-E5D9-34B2-A749-0306AE3CBB8D}</Project>
+      <Name>opencv_hfs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{0A8B4EE2-D420-332F-BE9B-579CBB3DBCD8}</Project>
+      <Name>opencv_highgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\opencv_highgui_plugins.vcxproj">
+      <Project>{29F7700D-E125-3D7D-9430-83CF3CA19166}</Project>
+      <Name>opencv_highgui_plugins</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\img_hash\opencv_img_hash.vcxproj">
+      <Project>{3A30B984-117C-37C1-A66B-08DB7FAE9356}</Project>
+      <Name>opencv_img_hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{039B94D0-2766-3AC4-9C98-074B2C2BEFCD}</Project>
+      <Name>opencv_imgcodecs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{3E4041DD-ED8E-3671-B52E-25A9CC391A5A}</Project>
+      <Name>opencv_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\intensity_transform\opencv_intensity_transform.vcxproj">
+      <Project>{AC995597-9105-397B-8962-A930FB99B2C3}</Project>
+      <Name>opencv_intensity_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\apps\interactive-calibration\opencv_interactive-calibration.vcxproj">
+      <Project>{95E08943-BC45-3CA6-94B7-D0619C3A3B4C}</Project>
+      <Name>opencv_interactive-calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\opencv_line_descriptor.vcxproj">
+      <Project>{EF303291-93DD-3B45-AF68-C003EF725A17}</Project>
+      <Name>opencv_line_descriptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\mcc\opencv_mcc.vcxproj">
+      <Project>{B57F3B37-BABA-39F7-96BD-1771E6A83969}</Project>
+      <Name>opencv_mcc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ml\opencv_ml.vcxproj">
+      <Project>{8F729D67-C562-3ED4-B6D2-142100F675A7}</Project>
+      <Name>opencv_ml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\apps\model-diagnostics\opencv_model_diagnostics.vcxproj">
+      <Project>{393C15C0-011D-33F0-88F4-C1102D25B7E6}</Project>
+      <Name>opencv_model_diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{8D1A7911-3C95-3FDF-9096-EC780AB919E9}</Project>
+      <Name>opencv_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\opencv_optflow.vcxproj">
+      <Project>{388ECDB1-DDA6-394E-8DE3-8742D2F2491E}</Project>
+      <Name>opencv_optflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bioinspired\opencv_perf_bioinspired.vcxproj">
+      <Project>{54386425-EB28-3A2B-AAF8-56A5A64DA712}</Project>
+      <Name>opencv_perf_bioinspired</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\calib3d\opencv_perf_calib3d.vcxproj">
+      <Project>{F664B6B1-1843-3DB9-99F5-066450331E75}</Project>
+      <Name>opencv_perf_calib3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\core\opencv_perf_core.vcxproj">
+      <Project>{9B7EF07D-800E-33EC-897B-4D5019D39DEF}</Project>
+      <Name>opencv_perf_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn\opencv_perf_dnn.vcxproj">
+      <Project>{3C930B1C-555C-3C68-87C5-DC2A3E9C544F}</Project>
+      <Name>opencv_perf_dnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\opencv_perf_dnn_superres.vcxproj">
+      <Project>{50C61BE7-3BB8-30C7-AAB7-9C1D59DC0505}</Project>
+      <Name>opencv_perf_dnn_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\features2d\opencv_perf_features2d.vcxproj">
+      <Project>{B4EA4FFE-C597-3859-BDC0-F54583B6F9A1}</Project>
+      <Name>opencv_perf_features2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\opencv_perf_gapi.vcxproj">
+      <Project>{ADAB0C46-EE61-30FF-8AF9-FB3BBE9730A8}</Project>
+      <Name>opencv_perf_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\imgcodecs\opencv_perf_imgcodecs.vcxproj">
+      <Project>{7A5DFEB6-7922-352A-9F9D-52964F46F762}</Project>
+      <Name>opencv_perf_imgcodecs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\imgproc\opencv_perf_imgproc.vcxproj">
+      <Project>{D6C87D6C-E45F-379F-9259-19D6F33A9DCB}</Project>
+      <Name>opencv_perf_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\opencv_perf_line_descriptor.vcxproj">
+      <Project>{6636360A-061E-3BE8-B23A-5E05825957F9}</Project>
+      <Name>opencv_perf_line_descriptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\mcc\opencv_perf_mcc.vcxproj">
+      <Project>{2A0EF368-596B-386A-9C7D-DA22AA6EACE7}</Project>
+      <Name>opencv_perf_mcc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\objdetect\opencv_perf_objdetect.vcxproj">
+      <Project>{B3554B58-9D72-3E2B-B171-8044EA30BB17}</Project>
+      <Name>opencv_perf_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\opencv_perf_optflow.vcxproj">
+      <Project>{32D5E1D7-C1FB-3F9E-9B0C-A166587E77C4}</Project>
+      <Name>opencv_perf_optflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\photo\opencv_perf_photo.vcxproj">
+      <Project>{6814243D-608C-3EEE-B1BB-9003DC8F3AE6}</Project>
+      <Name>opencv_perf_photo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\reg\opencv_perf_reg.vcxproj">
+      <Project>{281E39A9-B445-3902-974E-39FB31DB3AD5}</Project>
+      <Name>opencv_perf_reg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\opencv_perf_rgbd.vcxproj">
+      <Project>{FE73B066-042A-3431-B40B-30ECDB4DF751}</Project>
+      <Name>opencv_perf_rgbd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\signal\opencv_perf_signal.vcxproj">
+      <Project>{6306EA1F-3067-3272-9F0B-1E4D043E4DCA}</Project>
+      <Name>opencv_perf_signal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stereo\opencv_perf_stereo.vcxproj">
+      <Project>{8FABB856-9816-3BCB-90BE-E36AC2883FDF}</Project>
+      <Name>opencv_perf_stereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stitching\opencv_perf_stitching.vcxproj">
+      <Project>{06A6B962-B02B-3420-B951-81E2CD671C29}</Project>
+      <Name>opencv_perf_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\superres\opencv_perf_superres.vcxproj">
+      <Project>{76708141-D543-3952-A6FE-3A9CAEDFAC72}</Project>
+      <Name>opencv_perf_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\opencv_perf_tracking.vcxproj">
+      <Project>{05ABBDB4-1480-3830-83D3-A18A21D3B632}</Project>
+      <Name>opencv_perf_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\video\opencv_perf_video.vcxproj">
+      <Project>{C58C8EDE-49F1-3147-9D71-3AE5CD5AA550}</Project>
+      <Name>opencv_perf_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\videoio\opencv_perf_videoio.vcxproj">
+      <Project>{DCDCD74A-2E4A-3DC0-839E-ED5BACC607FB}</Project>
+      <Name>opencv_perf_videoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\wechat_qrcode\opencv_perf_wechat_qrcode.vcxproj">
+      <Project>{BD1FFD90-FCEE-3E7B-9AFB-A5F19D9DF0CB}</Project>
+      <Name>opencv_perf_wechat_qrcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\opencv_perf_xfeatures2d.vcxproj">
+      <Project>{B63C8537-D8A5-3705-8C0F-D50748A6D09E}</Project>
+      <Name>opencv_perf_xfeatures2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\opencv_perf_ximgproc.vcxproj">
+      <Project>{EB735A53-366F-36D5-9A67-E0508832D8E6}</Project>
+      <Name>opencv_perf_ximgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\opencv_perf_xphoto.vcxproj">
+      <Project>{CA84DCA0-C5DB-375E-B2E4-87EA74AF9B54}</Project>
+      <Name>opencv_perf_xphoto</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\phase_unwrapping\opencv_phase_unwrapping.vcxproj">
+      <Project>{4B72C4C0-7AE1-3107-88E5-27B6A928D569}</Project>
+      <Name>opencv_phase_unwrapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\photo\opencv_photo.vcxproj">
+      <Project>{FD19CF7B-33BE-3DCC-9807-389A16CFC733}</Project>
+      <Name>opencv_photo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\plot\opencv_plot.vcxproj">
+      <Project>{0EDC9C6E-ED48-35D8-84B1-6AF58B4DB674}</Project>
+      <Name>opencv_plot</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\quality\opencv_quality.vcxproj">
+      <Project>{4F55B978-BF98-30C5-8653-16ED7EC0983E}</Project>
+      <Name>opencv_quality</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rapid\opencv_rapid.vcxproj">
+      <Project>{9E392B42-F663-347C-B5AE-416FDC4386BC}</Project>
+      <Name>opencv_rapid</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\reg\opencv_reg.vcxproj">
+      <Project>{EE1B38FB-FA7B-30D0-A087-89338494FE76}</Project>
+      <Name>opencv_reg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\opencv_rgbd.vcxproj">
+      <Project>{A8799194-5C85-34D3-BB5C-3DDC48695023}</Project>
+      <Name>opencv_rgbd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\saliency\opencv_saliency.vcxproj">
+      <Project>{26947DCD-AE10-3FE2-A151-AA45B487DED0}</Project>
+      <Name>opencv_saliency</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\shape\opencv_shape.vcxproj">
+      <Project>{3E53F09C-484A-3D7A-9E4D-0457AEE33D27}</Project>
+      <Name>opencv_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\signal\opencv_signal.vcxproj">
+      <Project>{2DA5F919-B1B9-37AD-8F91-6F434D3448CF}</Project>
+      <Name>opencv_signal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stereo\opencv_stereo.vcxproj">
+      <Project>{70B88AC6-68C4-3FB5-B8AF-BEAA301531C8}</Project>
+      <Name>opencv_stereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stitching\opencv_stitching.vcxproj">
+      <Project>{79C6EA29-0A21-34C6-8144-25262C353D4F}</Project>
+      <Name>opencv_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\structured_light\opencv_structured_light.vcxproj">
+      <Project>{519EE909-DABD-3B76-B5B2-087DD01F8227}</Project>
+      <Name>opencv_structured_light</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\superres\opencv_superres.vcxproj">
+      <Project>{C152FD10-5624-3F78-8179-DDB52F1CE5FB}</Project>
+      <Name>opencv_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\surface_matching\opencv_surface_matching.vcxproj">
+      <Project>{E9C136EC-8368-3FC1-AC39-3BCDB54AB488}</Project>
+      <Name>opencv_surface_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bgsegm\opencv_test_bgsegm.vcxproj">
+      <Project>{B1FE3AD1-22BF-39E3-A3EF-9EDBA1546DC6}</Project>
+      <Name>opencv_test_bgsegm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\bioinspired\opencv_test_bioinspired.vcxproj">
+      <Project>{B793065B-E9FB-3B9A-9C75-31F14759268D}</Project>
+      <Name>opencv_test_bioinspired</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\calib3d\opencv_test_calib3d.vcxproj">
+      <Project>{ADD8994F-60EB-3C35-9E13-2D6E049C80BA}</Project>
+      <Name>opencv_test_calib3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\core\opencv_test_core.vcxproj">
+      <Project>{D3E77638-6490-3536-B708-9676D51B5464}</Project>
+      <Name>opencv_test_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\core\opencv_test_core_SSE2.vcxproj">
+      <Project>{11336A0B-CC5C-33A6-A98B-E4A1932EB56B}</Project>
+      <Name>opencv_test_core_SSE2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\core\opencv_test_core_SSE3.vcxproj">
+      <Project>{1CD79C8E-5BDE-3F38-B631-34E2F4CA2C17}</Project>
+      <Name>opencv_test_core_SSE3</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn\opencv_test_dnn.vcxproj">
+      <Project>{FFD91BFF-D720-3640-96BF-B0DC5385FB62}</Project>
+      <Name>opencv_test_dnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\dnn_superres\opencv_test_dnn_superres.vcxproj">
+      <Project>{7BE4828D-ECFD-3C5E-8775-4E56AD2FDF3C}</Project>
+      <Name>opencv_test_dnn_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\face\opencv_test_face.vcxproj">
+      <Project>{A631B526-A054-3B45-85F0-C263D188A475}</Project>
+      <Name>opencv_test_face</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\features2d\opencv_test_features2d.vcxproj">
+      <Project>{D75BA4BF-0DAC-36A6-8E0F-702569ED99DD}</Project>
+      <Name>opencv_test_features2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\flann\opencv_test_flann.vcxproj">
+      <Project>{36D5A57C-FB51-3122-97DB-1BC93D873A74}</Project>
+      <Name>opencv_test_flann</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\fuzzy\opencv_test_fuzzy.vcxproj">
+      <Project>{34C29C55-208E-327F-8798-43436002A9DE}</Project>
+      <Name>opencv_test_fuzzy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\gapi\opencv_test_gapi.vcxproj">
+      <Project>{129BA340-6156-3F37-9F41-E85C76272458}</Project>
+      <Name>opencv_test_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\highgui\opencv_test_highgui.vcxproj">
+      <Project>{0EAB4B29-D4EC-3089-9127-A4D524151D64}</Project>
+      <Name>opencv_test_highgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\img_hash\opencv_test_img_hash.vcxproj">
+      <Project>{2403728F-A708-33C8-8E36-02AFBD240522}</Project>
+      <Name>opencv_test_img_hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\imgcodecs\opencv_test_imgcodecs.vcxproj">
+      <Project>{AFBD789B-17D2-3B5D-AFFF-F216D26E9061}</Project>
+      <Name>opencv_test_imgcodecs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\imgproc\opencv_test_imgproc.vcxproj">
+      <Project>{916362B5-B663-3693-8DEF-BA91BFF97EA2}</Project>
+      <Name>opencv_test_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\intensity_transform\opencv_test_intensity_transform.vcxproj">
+      <Project>{935B4399-6F46-386B-9BD8-4B749EB7F3EB}</Project>
+      <Name>opencv_test_intensity_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\line_descriptor\opencv_test_line_descriptor.vcxproj">
+      <Project>{E1785A97-C202-3C3C-AF46-829B0DCC6C9C}</Project>
+      <Name>opencv_test_line_descriptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\mcc\opencv_test_mcc.vcxproj">
+      <Project>{17E313F0-40F3-31BC-AB6B-74D887C3D2DD}</Project>
+      <Name>opencv_test_mcc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ml\opencv_test_ml.vcxproj">
+      <Project>{0AA85CBB-DF49-3CB5-B375-B2D4A823C688}</Project>
+      <Name>opencv_test_ml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\objdetect\opencv_test_objdetect.vcxproj">
+      <Project>{E002F3F6-9276-37DE-B3B0-4F08E5CBF3C6}</Project>
+      <Name>opencv_test_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\optflow\opencv_test_optflow.vcxproj">
+      <Project>{FF15C7B5-BCFF-3182-8FBE-17D8BE270D84}</Project>
+      <Name>opencv_test_optflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\phase_unwrapping\opencv_test_phase_unwrapping.vcxproj">
+      <Project>{A179B288-F03D-39D7-B202-7574E1E1EB70}</Project>
+      <Name>opencv_test_phase_unwrapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\photo\opencv_test_photo.vcxproj">
+      <Project>{2516AE9F-682F-31DB-90E6-F39D6AB05782}</Project>
+      <Name>opencv_test_photo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\quality\opencv_test_quality.vcxproj">
+      <Project>{9C389817-C080-34A9-82C9-76F58C710D5E}</Project>
+      <Name>opencv_test_quality</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rapid\opencv_test_rapid.vcxproj">
+      <Project>{1C929A21-46A8-302F-B1C6-5F643CC82371}</Project>
+      <Name>opencv_test_rapid</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\reg\opencv_test_reg.vcxproj">
+      <Project>{F5850F4E-3FBE-3E63-B667-8AD37F8A0AC6}</Project>
+      <Name>opencv_test_reg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\rgbd\opencv_test_rgbd.vcxproj">
+      <Project>{F7E2B8CB-81EA-3FD9-B926-55A4D7711306}</Project>
+      <Name>opencv_test_rgbd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\saliency\opencv_test_saliency.vcxproj">
+      <Project>{C6646900-7514-349D-B4B7-E6B2CC84B821}</Project>
+      <Name>opencv_test_saliency</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\shape\opencv_test_shape.vcxproj">
+      <Project>{7AA29ADF-8F7C-3431-887F-0AF11B7EA038}</Project>
+      <Name>opencv_test_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\signal\opencv_test_signal.vcxproj">
+      <Project>{13A3FC68-6ACD-3469-B0EC-B5FEC125ECAC}</Project>
+      <Name>opencv_test_signal</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stereo\opencv_test_stereo.vcxproj">
+      <Project>{D976753A-CE06-321F-B510-2B68CE2CBBDF}</Project>
+      <Name>opencv_test_stereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\stitching\opencv_test_stitching.vcxproj">
+      <Project>{BC4E5701-6626-33CE-8F71-A0545D164125}</Project>
+      <Name>opencv_test_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\structured_light\opencv_test_structured_light.vcxproj">
+      <Project>{3D4F2C5F-2848-305C-8889-0F5220BF06D7}</Project>
+      <Name>opencv_test_structured_light</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\superres\opencv_test_superres.vcxproj">
+      <Project>{3DC4A9EE-A96D-3C00-801D-432E330E1A36}</Project>
+      <Name>opencv_test_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\opencv_test_text.vcxproj">
+      <Project>{2B6F510B-83F2-3613-9C2B-022F3417A124}</Project>
+      <Name>opencv_test_text</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\opencv_test_tracking.vcxproj">
+      <Project>{561433F1-BEC4-3587-B464-39067C7BE78B}</Project>
+      <Name>opencv_test_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\video\opencv_test_video.vcxproj">
+      <Project>{7F7B3D0F-F8CB-378F-A5B7-F57B4433D4E0}</Project>
+      <Name>opencv_test_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\videoio\opencv_test_videoio.vcxproj">
+      <Project>{DEE6B51D-EB2A-3817-9593-C67149C5D255}</Project>
+      <Name>opencv_test_videoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\videostab\opencv_test_videostab.vcxproj">
+      <Project>{D4C49BB6-FAC0-38AE-9A5B-6A20509E70AC}</Project>
+      <Name>opencv_test_videostab</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\wechat_qrcode\opencv_test_wechat_qrcode.vcxproj">
+      <Project>{CC79B173-B0FD-3D51-BF87-23942AB71DE8}</Project>
+      <Name>opencv_test_wechat_qrcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\opencv_test_xfeatures2d.vcxproj">
+      <Project>{E1E96EC0-BC5D-3D7E-9BFE-87982DD4A563}</Project>
+      <Name>opencv_test_xfeatures2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\opencv_test_ximgproc.vcxproj">
+      <Project>{91888682-CDBE-32E1-99A1-1BF70D8BFC7A}</Project>
+      <Name>opencv_test_ximgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\opencv_test_xphoto.vcxproj">
+      <Project>{BDF87486-7D6D-34AE-A84B-F01D09D926AF}</Project>
+      <Name>opencv_test_xphoto</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\text\opencv_text.vcxproj">
+      <Project>{73D54E38-A835-375E-9366-8E968856C5BB}</Project>
+      <Name>opencv_text</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\tracking\opencv_tracking.vcxproj">
+      <Project>{021E813E-637E-3934-AB49-982FFBF3DA9D}</Project>
+      <Name>opencv_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ts\opencv_ts.vcxproj">
+      <Project>{B567D7FA-9F09-36F3-BA8A-9F93A4706934}</Project>
+      <Name>opencv_ts</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\apps\version\opencv_version.vcxproj">
+      <Project>{AC058931-2959-3A31-8A12-B9F085F5BF83}</Project>
+      <Name>opencv_version</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\apps\version\opencv_version_win32.vcxproj">
+      <Project>{98456F3F-FC7B-324F-BBA1-45011141A941}</Project>
+      <Name>opencv_version_win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\video\opencv_video.vcxproj">
+      <Project>{C55EE180-6AA2-320C-A4C0-11239AECC0AC}</Project>
+      <Name>opencv_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{02130A93-8AEC-3B94-A5C7-FEFE826FB4F0}</Project>
+      <Name>opencv_videoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\.firstpass\videoio\opencv_videoio_plugins.vcxproj">
+      <Project>{EE9B74D1-53FF-3658-ADCD-92A5044C1F20}</Project>
+      <Name>opencv_videoio_plugins</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\videostab\opencv_videostab.vcxproj">
+      <Project>{12919F92-87E6-33B6-9FB5-71E438DF4850}</Project>
+      <Name>opencv_videostab</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\apps\visualisation\opencv_visualisation.vcxproj">
+      <Project>{4A131B11-8EA4-3AA4-86D4-15B9684669A3}</Project>
+      <Name>opencv_visualisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xobjdetect\tools\waldboost_detector\opencv_waldboost_detector.vcxproj">
+      <Project>{724E9856-5C68-3A4B-ADC7-16A692946791}</Project>
+      <Name>opencv_waldboost_detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\wechat_qrcode\opencv_wechat_qrcode.vcxproj">
+      <Project>{D5FDA58A-FC5E-3481-9EA9-A0C457E7338C}</Project>
+      <Name>opencv_wechat_qrcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xfeatures2d\opencv_xfeatures2d.vcxproj">
+      <Project>{913FE8FE-945E-36BD-AC27-1C0650198BF1}</Project>
+      <Name>opencv_xfeatures2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\ximgproc\opencv_ximgproc.vcxproj">
+      <Project>{4E94F58B-3207-3FDA-9FA6-6884A75753A7}</Project>
+      <Name>opencv_ximgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xobjdetect\opencv_xobjdetect.vcxproj">
+      <Project>{4901F8AA-9D7D-324D-A4E0-F2F776842657}</Project>
+      <Name>opencv_xobjdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\testDownloads\opencv Lib\modules\xphoto\opencv_xphoto.vcxproj">
+      <Project>{C778F2A4-5EE6-3733-BB1A-BE2C2DE98799}</Project>
+      <Name>opencv_xphoto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
